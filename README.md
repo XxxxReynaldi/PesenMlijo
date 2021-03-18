@@ -1,4 +1,5 @@
 # PesenMlijo
-First Project Android Studio using Github
+# STIKI MALANG
+# SEMUT UNIC Developer Team
 
-Let's Make it happen
+**PROJECT AP3**
