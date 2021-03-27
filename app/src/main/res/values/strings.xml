@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PesenMlijo</string>
+    <string name="nama_produk">Nama Produk</string>
+    <string name="harga">Harga</string>
 </resources>
