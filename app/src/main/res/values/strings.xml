@@ -2,4 +2,6 @@
     <string name="app_name">PesenMlijo</string>
     <string name="nama_produk">Nama Produk</string>
     <string name="harga">Harga</string>
+    <string name="lihat_produk">Lihat Produk</string>
+    <string name="bagikan">Bagikan</string>
 </resources>
