@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:layout_centerInParent="true">
+        <!-- TextView Image-Produk -->
+
+        <ImageView
+            android:id="@+id/image_produk"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            />
+        <!-- TextView Nama-Produk -->
+        <TextView
+            android:id="@+id/namaP"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/image_produk"
+            android:textStyle="bold"
+            android:text="@string/nama_produk"
+            android:textSize="18sp" />
+
+        <!-- TextView Harga-Produk -->
+        <TextView
+            android:id="@+id/hargaP"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/namaP"
+            android:layout_toRightOf="@id/image_produk"
+            android:text="@string/harga"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/lihat_produk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/image_produk"
+            android:layout_below="@id/hargaP"
+            android:text="@string/lihat_produk"
+
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/bagikan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@id/lihat_produk"
+            android:layout_below="@id/hargaP"
+
+
+            android:text="@string/bagikan"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
