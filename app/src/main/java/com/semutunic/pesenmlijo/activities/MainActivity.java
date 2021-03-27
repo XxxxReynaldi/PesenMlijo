@@ -1,8 +1,10 @@
-package com.semutunic.pesenmlijo;
+package com.semutunic.pesenmlijo.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.semutunic.pesenmlijo.R;
 
 public class MainActivity extends AppCompatActivity {
 
