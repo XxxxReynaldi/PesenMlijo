@@ -7,4 +7,9 @@
     <string name="menu_settings">Settings</string>
     <string name="tv_tes">AAA</string>
     <string name="stok_habis">stok habis</string>
+    <string name="produk">PRODUK</string>
+    <string name="jumlah_produk">Jumlah Produk</string>
+    <string name="tambah_produk">Tambah Produk</string>
+    <string name="filter">Filter</string>
+    <string name="daftar_produk">Daftar Produk</string>
 </resources>

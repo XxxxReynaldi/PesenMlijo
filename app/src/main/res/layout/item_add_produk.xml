@@ -41,18 +41,18 @@
             android:textColor="#000000"/>
 
         <!-- TextView Harga-Produk -->
-        <TextView
-            android:id="@+id/hargaP"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/namaP"
-            android:layout_toRightOf="@id/image_produk"
-            android:fontFamily="@font/roboto_light"
-            android:text="@string/harga"
-            android:textSize="14sp"
-            android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/hargaP"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/namaP"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/image_produk"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/harga"
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
         <Button
             android:id="@+id/lihat_produk"
