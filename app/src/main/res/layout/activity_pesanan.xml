@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".pesanan">
+
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:id="@+id/pesananbaru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baru"
+                />
+
+            <ImageView
+                android:id="@+id/proses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:src="@drawable/proses"
+                />
+
+            <ImageView
+                android:id="@+id/pengiriman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:src="@drawable/pengiriman"
+                />
+
+            <ImageView
+                android:id="@+id/sampai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:src="@drawable/sampai"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/top2"
+        android:layout_below="@id/header"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:text="Pesanan Baru"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="#484848"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:fontFamily="@font/roboto"
+            android:text="Diproses"
+            android:textColor="#484848"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="Dalam Pengiriman"
+            android:fontFamily="@font/roboto"
+            android:textColor="#484848"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:fontFamily="@font/roboto"
+            android:text="Sampai Tujuan"
+            android:textColor="#484848"
+            android:gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_below="@id/top2"
+        android:id="@+id/bottom"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:id="@+id/selesai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selesai"
+                android:layout_marginStart="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/batal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:src="@drawable/batal"
+                />
+
+            <ImageView
+                android:id="@+id/tolak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53dp"
+                android:src="@drawable/tolak"
+                />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+
+        android:layout_below="@id/bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:text="Selesai"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="#484848"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:fontFamily="@font/roboto"
+            android:text="Dibatalkan"
+            android:textColor="#484848"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Ditolak"
+            android:fontFamily="@font/roboto"
+            android:textColor="#484848"
+            android:gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_bawah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bawah"/>
+
+</RelativeLayout>

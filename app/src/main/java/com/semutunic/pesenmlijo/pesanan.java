@@ -1,4 +1,4 @@
-package com.semutunic.pesenmlijo.activities;
+package com.semutunic.pesenmlijo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,15 +7,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.semutunic.pesenmlijo.R;
 
-public class MainActivity extends AppCompatActivity {
+public class pesanan extends AppCompatActivity {
     private BottomNavigationView menu_bawah;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_pesanan);
         menu_bawah = findViewById(R.id.menu_bawah);
         menu_bawah.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
     }
