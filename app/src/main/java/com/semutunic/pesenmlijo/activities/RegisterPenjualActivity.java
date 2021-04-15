@@ -1,10 +1,12 @@
-package com.semutunic.pesenmlijo;
+package com.semutunic.pesenmlijo.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class register_penjuall extends AppCompatActivity {
+import com.semutunic.pesenmlijo.R;
+
+public class RegisterPenjualActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

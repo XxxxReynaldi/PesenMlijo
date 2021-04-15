@@ -1,4 +1,4 @@
-package com.semutunic.pesenmlijo;
+package com.semutunic.pesenmlijo.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,10 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.semutunic.pesenmlijo.activities.MainActivity;
-import com.semutunic.pesenmlijo.activities.ProdukActivity;
+import com.semutunic.pesenmlijo.R;
 
-public class pesanan extends AppCompatActivity {
+public class PesananActivity extends AppCompatActivity {
     private BottomNavigationView menu_bawah;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,17 +26,17 @@ public class pesanan extends AppCompatActivity {
         switch (menuItem.getItemId()){
             case R.id.home:
                 //aksi ketika home di klik
-                intent = new Intent(pesanan.this, MainActivity.class);
+                intent = new Intent(PesananActivity.this, MainActivity.class);
                 startActivity(intent);
                 break;
             case R.id.pesanan:
                 //aksi ketika profile di klik
-                intent = new Intent(pesanan.this, pesanan.class);
+                intent = new Intent(PesananActivity.this, PesananActivity.class);
                 startActivity(intent);
                 break;
             case R.id.produk:
                 //aksi ketika folder di klik
-                intent = new Intent(pesanan.this, ProdukActivity.class);
+                intent = new Intent(PesananActivity.this, ProdukActivity.class);
                 startActivity(intent);
                 break;
             case R.id.akun:

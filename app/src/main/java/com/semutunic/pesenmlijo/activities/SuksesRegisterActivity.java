@@ -1,10 +1,12 @@
-package com.semutunic.pesenmlijo;
+package com.semutunic.pesenmlijo.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class sukses_verifikasi extends AppCompatActivity {
+import com.semutunic.pesenmlijo.R;
+
+public class SuksesRegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

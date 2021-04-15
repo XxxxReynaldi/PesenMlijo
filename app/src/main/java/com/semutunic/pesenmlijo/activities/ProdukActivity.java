@@ -11,7 +11,8 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.semutunic.pesenmlijo.R;
-import com.semutunic.pesenmlijo.pesanan;
+import com.semutunic.pesenmlijo.adapter.ProdukAdapter;
+import com.semutunic.pesenmlijo.model.ProdukModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,7 +88,7 @@ public class ProdukActivity extends AppCompatActivity {
                 break;
             case R.id.pesanan:
                 //aksi ketika profile di klik
-                intent = new Intent(ProdukActivity.this, pesanan.class);
+                intent = new Intent(ProdukActivity.this, PesananActivity.class);
                 startActivity(intent);
                 break;
             case R.id.produk:
