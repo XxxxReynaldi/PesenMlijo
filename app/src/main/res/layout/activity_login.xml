@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,8 +9,9 @@
     tools:context=".activities.LoginActivity">
 
     <FrameLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -40,15 +42,120 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="AAAA"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#1D6744"
+                android:id="@+id/selamat"
+                android:text="Selamat"
+                android:fontFamily="@font/roboto_medium_italic"
+                android:textSize="48sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selamat"
+                android:textColor="#1D6744"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Datang"
+                android:fontFamily="@font/roboto_medium_italic"
                 android:textSize="48sp" />
 
         </RelativeLayout>
 
     </FrameLayout>
 
+    <FrameLayout
+        android:id="@+id/main"
+        android:layout_below="@id/header"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etemail"
+                android:fontFamily="@font/roboto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:hint="Email" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etpassword"
+                    android:fontFamily="@font/roboto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:hint="Kata Sandi" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lupa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password"
+                android:textColor="#00552E"
+                android:layout_marginTop="10dp"
+                android:layout_alignRight="@id/password"
+                android:text="Lupa Kata Sandi ?"
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/Masuk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button2"
+                android:textColor="#ffffff"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_below="@id/lupa"
+                android:text="Masuk"
+                android:textSize="28dp"/>
+
+            <TextView
+                android:id="@+id/atau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/Masuk"
+                android:textColor="#696969"
+                android:layout_marginTop="35dp"
+                android:text=" Atau Daftar Sebagai "
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </FrameLayout>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -57,19 +164,42 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"/>
 
-    <ScrollView
+
+    <FrameLayout
+        android:layout_below="@id/main"
+        android:layout_marginTop="35dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Wrap Content -->
         <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/pembeli"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button3"
+                android:textColor="#00552E"
+                android:text="Pembeli"
+                android:textSize="24dp"
+                android:fontFamily="@font/roboto_bold"/>
+
+            <Button
+                android:id="@+id/penjual"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/button3"
+                android:textColor="#00552E"
+                android:text="Penjual"
+                android:textSize="24dp"
+                android:fontFamily="@font/roboto_bold"/>
 
         </LinearLayout>
-        <!-- End Wrap Content -->
-    </ScrollView>
+    </FrameLayout>
 
 </RelativeLayout>

@@ -6,4 +6,6 @@
 
     <color name="colorPrimaryWhite">#FFFFFF</color>
     <color name="colorPrimaryGreen">#1D6744</color>
+    <color name="colorBtnDanger">#EF4136</color>
+
 </resources>
