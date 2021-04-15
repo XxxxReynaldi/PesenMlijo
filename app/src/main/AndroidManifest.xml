@@ -15,9 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".pesanan"></activity>
-        <activity android:name=".sukses_verifikasi" />
-        <activity android:name=".register_penjuall" />
+        <activity android:name=".activities.PesananActivity"></activity>
+        <activity android:name=".activities.SuksesRegisterActivity" />
+        <activity android:name=".activities.RegisterPenjualActivity" />
+
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>

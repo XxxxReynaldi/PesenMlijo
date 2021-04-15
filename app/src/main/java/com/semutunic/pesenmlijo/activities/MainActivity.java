@@ -9,7 +9,6 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.semutunic.pesenmlijo.R;
-import com.semutunic.pesenmlijo.pesanan;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView menu_bawah;
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.pesanan:
                 //aksi ketika profile di klik
-                intent = new Intent(MainActivity.this, pesanan.class);
+                intent = new Intent(MainActivity.this, PesananActivity.class);
                 startActivity(intent);
                 break;
             case R.id.produk:
