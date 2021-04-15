@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "971612694213",
+    "project_id": "jomlijo",
+    "storage_bucket": "jomlijo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971612694213:android:2292b7abc34a640a38f2ac",
+        "android_client_info": {
+          "package_name": "com.semutunic.pesenmlijo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971612694213-op3c4on88jjaapbagfrq168ij5ji130v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgCcChGSp2dW8n9LCidMoQU-v6n3akPDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971612694213-op3c4on88jjaapbagfrq168ij5ji130v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
