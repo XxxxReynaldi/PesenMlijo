@@ -1,49 +1,87 @@
 package com.semutunic.pesenmlijo.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.util.Log;
+import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.fragments.BerandaFragment;
+import com.semutunic.pesenmlijo.fragments.PesananFragment;
 
 public class MainActivity extends AppCompatActivity {
-    private BottomNavigationView menu_bawah;
+    MeowBottomNavigation bottomNavigation;
+    private static final String TAG = "tes";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        menu_bawah = findViewById(R.id.menu_bawah);
-        menu_bawah.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
+        bottomNavigation = findViewById(R.id.menu_bawah);
+        bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.beranda));
+        bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.pesanan));
+        bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.produk1));
+        bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.akun));
+
+        bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
+            @Override
+            public void onShowItem(MeowBottomNavigation.Model item) {
+                Fragment selectedFragment = null;
+                Intent intent = new Intent();
+                switch (item.getId()) {
+                    case 1:
+                        selectedFragment = new BerandaFragment();
+                        break;
+                    case 2:
+                        selectedFragment = new PesananFragment();
+                        break;
+                    case 3:
+//                        Log.i(TAG, "onShowItem: "+item.getId());
+                        intent = new Intent(MainActivity.this, ProdukActivity.class);
+                        startActivity(intent);
+//                        finish();
+                        break;
+                    case 4:
+                        selectedFragment = new BerandaFragment();
+                        break;
+                }
+                if (selectedFragment != null ){
+                    loadFragment(selectedFragment);
+                } else {
+                    Log.i(TAG, "onShowItem: "+item.getId());
+                }
+
+
+            }
+        });
+
+        //set
+
+        bottomNavigation.show(2, true);
+        bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
+            @Override
+            public void onClickItem(MeowBottomNavigation.Model item) {
+                //Toast.makeText(getApplicationContext(),"ini " + item.getId(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
+            @Override
+            public void onReselectItem(MeowBottomNavigation.Model item) {
+                //Toast.makeText(getApplicationContext(),"ini " + item.getId(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        Intent intent;
-        switch (menuItem.getItemId()){
-            case R.id.home:
-                //aksi ketika home di klik
-                intent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.pesanan:
-                //aksi ketika profile di klik
-                intent = new Intent(MainActivity.this, PesananActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.produk:
-                //aksi ketika folder di klik
-                intent = new Intent(MainActivity.this, ProdukActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.akun:
-                //aksi ketika pesan di klik
-
-                break;
-        }
-        return true;
+    private void loadFragment(Fragment selectedFragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,
+                selectedFragment).commit();
     }
+
+
 }

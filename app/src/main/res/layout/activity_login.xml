@@ -9,7 +9,7 @@
     tools:context=".activities.LoginActivity">
 
     <FrameLayout
-        android:id="@+id/header"
+        android:id="@+id/iv_section1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -67,7 +67,7 @@
 
     <FrameLayout
         android:id="@+id/main"
-        android:layout_below="@id/header"
+        android:layout_below="@id/iv_section1"
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

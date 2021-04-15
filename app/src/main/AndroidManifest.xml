@@ -15,9 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".activities.PesananActivity"></activity>
         <activity android:name=".activities.SuksesRegisterActivity" />
         <activity android:name=".activities.RegisterPenjualActivity" />
+
+        <activity android:name=".activities.ProdukActivity" />
 
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.MainActivity">
@@ -27,9 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity">
 
-        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
