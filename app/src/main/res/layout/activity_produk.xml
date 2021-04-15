@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_shadow_end_color">
+  >
 
     <RelativeLayout
         android:id="@+id/B_atas"
@@ -127,13 +127,5 @@
 <!--        android:id="@+id/recycler_view"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent"/>-->
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/menu_bawah"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/menu_bawah"/>
 
 </RelativeLayout>

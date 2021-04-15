@@ -1,4 +1,4 @@
-package com.semutunic.pesenmlijo.model;
+package com.semutunic.pesenmlijo.models;
 
 public class ProdukModel {
 

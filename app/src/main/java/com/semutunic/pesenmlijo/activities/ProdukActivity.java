@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.semutunic.pesenmlijo.R;
 import com.semutunic.pesenmlijo.adapter.ProdukAdapter;
-import com.semutunic.pesenmlijo.model.ProdukModel;
+import com.semutunic.pesenmlijo.models.ProdukModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +29,6 @@ public class ProdukActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_produk);
-
-            menu_bawah = findViewById(R.id.menu_bawah);
-            menu_bawah.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
 
             //getting the recyclerview from xml
             recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
@@ -78,31 +75,7 @@ public class ProdukActivity extends AppCompatActivity {
             recyclerView.setAdapter(adapter);
         }
 
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        Intent intent;
-        switch (menuItem.getItemId()){
-            case R.id.home:
-                //aksi ketika home di klik
-                intent = new Intent(ProdukActivity.this, MainActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.pesanan:
-                //aksi ketika profile di klik
-                intent = new Intent(ProdukActivity.this, PesananActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.produk:
-                //aksi ketika folder di klik
-                intent = new Intent(ProdukActivity.this, ProdukActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.akun:
-                //aksi ketika pesan di klik
 
-                break;
-        }
-        return true;
-    }
 }
 
 
