@@ -14,9 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".activities.PesananActivity"></activity>
         <activity android:name=".activities.SuksesRegisterActivity" />
         <activity android:name=".activities.RegisterPenjualActivity" />
+
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
@@ -24,6 +26,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainActivity">
+
         </activity>
 
         <meta-data
