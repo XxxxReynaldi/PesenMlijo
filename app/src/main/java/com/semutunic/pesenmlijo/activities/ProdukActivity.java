@@ -1,18 +1,24 @@
 package com.semutunic.pesenmlijo.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.adapter.ProdukAdapter;
+import com.semutunic.pesenmlijo.models.ProdukModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProdukActivity extends AppCompatActivity {
-
+    private BottomNavigationView menu_bawah;
         //a list to store all the products
         List<ProdukModel> productList;
 
@@ -68,6 +74,8 @@ public class ProdukActivity extends AppCompatActivity {
             //setting adapter to recyclerview
             recyclerView.setAdapter(adapter);
         }
+
+
 }
 
 

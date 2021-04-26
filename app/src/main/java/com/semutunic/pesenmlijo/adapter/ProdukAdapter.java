@@ -1,4 +1,4 @@
-package com.semutunic.pesenmlijo.activities;
+package com.semutunic.pesenmlijo.adapter;
 
 
 import android.content.Context;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.models.ProdukModel;
 
 import java.util.List;
 
