@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.fragments.AkunFragment;
 import com.semutunic.pesenmlijo.fragments.BerandaFragment;
 import com.semutunic.pesenmlijo.fragments.PesananFragment;
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 //                        finish();
                         break;
                     case 4:
-                        selectedFragment = new BerandaFragment();
+                        selectedFragment = new AkunFragment();
                         break;
                 }
                 if (selectedFragment != null ){
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         //set
 
-        bottomNavigation.show(2, true);
+        bottomNavigation.show(1, true);
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
