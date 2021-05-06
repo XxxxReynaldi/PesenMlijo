@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/etemail"
+                    android:id="@+id/EtEmail"
                     android:fontFamily="@font/roboto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/etpassword"
+                    android:id="@+id/EtPassword"
                     android:fontFamily="@font/roboto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/Masuk"
+                android:id="@+id/BtnMasuk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button2"
@@ -147,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/Masuk"
+                android:layout_below="@id/BtnMasuk"
                 android:textColor="#696969"
                 android:layout_marginTop="35dp"
                 android:text=" Atau Daftar Sebagai "
@@ -179,7 +179,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/pembeli"
+                android:id="@+id/BtnPembeli"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button3"
@@ -189,7 +189,7 @@
                 android:fontFamily="@font/roboto_bold"/>
 
             <Button
-                android:id="@+id/penjual"
+                android:id="@+id/BtnPenjual"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"

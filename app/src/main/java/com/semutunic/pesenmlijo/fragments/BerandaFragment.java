@@ -3,12 +3,20 @@ package com.semutunic.pesenmlijo.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.adapter.BerandaAdapter;
+import com.semutunic.pesenmlijo.models.BerandaModel;
+import com.semutunic.pesenmlijo.models.ProdukModel;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +33,8 @@ public class BerandaFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    RecyclerView recyclerView;
+    ArrayList<BerandaModel> dataholder;
 
     public BerandaFragment() {
         // Required empty public constructor
@@ -61,6 +71,22 @@ public class BerandaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_beranda, container, false);
+        View view = inflater.inflate(R.layout.fragment_beranda, container, false);
+        recyclerView=view.findViewById(R.id.recview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        dataholder=new ArrayList<>();
+
+        BerandaModel ob1=new BerandaModel(R.drawable.alin,"Alin","Tomat");
+        dataholder.add(ob1);
+
+        BerandaModel ob2=new BerandaModel(R.drawable.annisa,"Annisa","Bawang Merah");
+        dataholder.add(ob2);
+
+        BerandaModel ob3=new BerandaModel(R.drawable.annisa,"Khansa","Bawang Merah, Cabai");
+        dataholder.add(ob3);
+
+        recyclerView.setAdapter(new BerandaAdapter(dataholder));
+
+        return view;
     }
 }

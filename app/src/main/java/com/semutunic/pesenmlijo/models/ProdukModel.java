@@ -1,52 +1,36 @@
 package com.semutunic.pesenmlijo.models;
 
 public class ProdukModel {
+    int image;
+    String headerP,descP;
 
-
-        private int id;
-        private int image_produk;
-        private String namaproduk;
-        private double hargaproduk;
-//        private String shortdesc;
-//        private double rating;
-
-
-
-        public ProdukModel(int id, String namaproduk, double hargaproduk, int image_produk) {
-            this.id = id;
-            this.image_produk = image_produk;
-            this.namaproduk = namaproduk;
-            this.hargaproduk = hargaproduk;
-
-//            this.shortdesc = shortdesc;
-//            this.rating = rating;
-
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public int getImage() {
-            return image_produk;
-        }
-
-        public String getNamaProduk() {
-            return namaproduk;
-        }
-
-        public double getHargaProduk() {
-            return hargaproduk;
-        }
-
-
-//        public String getShortdesc() {
-//            return shortdesc;
-//        }
-
-//        public double getRating() {
-//            return rating;
-//        }
-
-
+    public ProdukModel(int image, String header, String desc) {
+        this.image = image;
+        this.headerP = header;
+        this.descP = desc;
     }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public String getHeaderP() {
+        return headerP;
+    }
+
+    public void setHeaderP(String headerP) {
+        this.headerP = headerP;
+    }
+
+    public String getDescP() {
+        return descP;
+    }
+
+    public void setDescP(String descP) {
+        this.descP = descP;
+    }
+}

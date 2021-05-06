@@ -14,11 +14,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ProfilActivity"></activity>
+
+        <activity android:name=".activities.PesananBaru"
+            android:label="Pesanan Baru"
+            android:parentActivityName=".fragments.PesananFragment"
+            android:theme="@style/AppTheme2"/>
+
+        <activity android:name=".activities.SplashScreen" />
+
+        <activity
+            android:name=".EditProfilActivity"
+            android:label="Edit Profil"
+            android:parentActivityName=".activities.ProfilActivity"
+            android:theme="@style/AppTheme2" />
+
+        <activity
+            android:name=".activities.ProfilActivity"
+            android:label="Profil"
+            android:parentActivityName=".fragments.AkunFragment"
+            android:theme="@style/AppTheme2" />
+
         <activity android:name=".activities.SuksesRegisterActivity" />
+
         <activity android:name=".activities.RegisterPenjualActivity" />
-        <activity android:name=".activities.ProdukActivity" />
+
+
         <activity android:name=".activities.LoginActivity" />
+
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

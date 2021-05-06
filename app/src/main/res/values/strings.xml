@@ -14,4 +14,36 @@
     <string name="daftar_produk">Daftar Produk</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="daftar_provinsi">
+        <item>Aceh</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Riau</item>
+        <item>Kepulauan Riau</item>
+        <item>Jambi</item>
+        <item>Sumatera Selatan</item>
+        <item>Kepulauan Bangka Belitung</item>
+        <item>Bengkulu</item>
+        <item>Lampung</item>
+        <item>DKI Jakarta</item>
+        <item>Banten</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>Jawa Timur</item>
+        <item>Yogyakarta</item>
+        <item>Bali</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Barat</item>
+    </string-array>
 </resources>
+
