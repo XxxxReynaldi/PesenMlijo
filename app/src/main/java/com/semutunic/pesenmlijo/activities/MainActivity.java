@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -13,6 +14,7 @@ import com.semutunic.pesenmlijo.R;
 import com.semutunic.pesenmlijo.fragments.AkunFragment;
 import com.semutunic.pesenmlijo.fragments.BerandaFragment;
 import com.semutunic.pesenmlijo.fragments.PesananFragment;
+import com.semutunic.pesenmlijo.fragments.ProdukFragment;
 
 public class MainActivity extends AppCompatActivity {
     MeowBottomNavigation bottomNavigation;
@@ -42,10 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new PesananFragment();
                         break;
                     case 3:
-//                        Log.i(TAG, "onShowItem: "+item.getId());
-                        intent = new Intent(MainActivity.this, ProdukActivity.class);
-                        startActivity(intent);
-//                        finish();
+                        selectedFragment = new ProdukFragment();
                         break;
                     case 4:
                         selectedFragment = new AkunFragment();

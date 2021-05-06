@@ -1,78 +1,57 @@
 package com.semutunic.pesenmlijo.adapter;
 
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.semutunic.pesenmlijo.R;
 import com.semutunic.pesenmlijo.models.ProdukModel;
 
-import java.util.List;
-
+import java.util.ArrayList;
 public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProductViewHolder> {
 
+    ArrayList<ProdukModel> dataholders;
 
-    //this context we will use to inflate the layout
-    private Context mCtx;
+    public ProdukAdapter(ArrayList<ProdukModel> dataholders) {
+        this.dataholders = dataholders;
+    }
 
-    //we are storing all the products in a list
-    private List<ProdukModel> productList;
-
-    //getting the context and product list with constructor
-    public ProdukAdapter(Context mCtx, List<ProdukModel> productList) {
-        this.mCtx = mCtx;
-        this.productList = productList;
+    @NonNull
+    @Override
+    public ProdukAdapter.ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.row_produk,parent,false);
+        return new ProdukAdapter.ProductViewHolder(view);
     }
 
     @Override
-    public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        //inflating and returning our view holder
-        LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.item_add_produk, null);
-        return new ProductViewHolder(view);
+    public void onBindViewHolder(@NonNull ProdukAdapter.ProductViewHolder holder, int position)
+    {
+        holder.img.setImageResource(dataholders.get(position).getImage());
+        holder.headerP.setText(dataholders.get(position).getHeaderP());
+        holder.descP.setText(dataholders.get(position).getDescP());
     }
-
-    @Override
-    public void onBindViewHolder(ProductViewHolder holder, int position) {
-        //getting the product of the specified position
-        ProdukModel product = productList.get(position);
-
-        //binding the data with the viewholder views
-        holder.namaproduk.setText(product.getNamaProduk());
-//        holder.textViewShortDesc.setText(product.getShortdesc());
-//        holder.textViewRating.setText(String.valueOf(product.getRating()));
-        holder.hargaproduk.setText(String.valueOf(product.getHargaProduk()));
-
-        holder.image_produk.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
-
-    }
-
 
     @Override
     public int getItemCount() {
-        return productList.size();
+        return dataholders.size();
     }
 
-
-    class ProductViewHolder extends RecyclerView.ViewHolder {
-
-        TextView namaproduk, hargaproduk;
-        ImageView image_produk;
-
-        public ProductViewHolder(View itemView) {
+    class ProductViewHolder extends RecyclerView.ViewHolder
+    {
+        ImageView img;
+        TextView headerP,descP;
+        public ProductViewHolder(@NonNull View itemView)
+        {
             super(itemView);
-
-            namaproduk = itemView.findViewById(R.id.namaP);
-//            textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
-//            textViewRating = itemView.findViewById(R.id.textViewRating);
-            hargaproduk = itemView.findViewById(R.id.hargaP);
-            image_produk = itemView.findViewById(R.id.image_produk);
+            img=itemView.findViewById(R.id.ImgProduk);
+            headerP=itemView.findViewById(R.id.TVNamaProduk);
+            descP=itemView.findViewById(R.id.TVHargaProduk);
         }
     }
 }

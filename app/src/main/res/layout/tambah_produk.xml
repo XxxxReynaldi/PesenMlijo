@@ -6,46 +6,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/cardview_shadow_end_color">
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/cardt1">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageButton
-                    android:id="@+id/back"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="5dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/ic_action_back"/>
-                <TextView
-                    android:id="@+id/ptambah_produk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:gravity="center"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_toRightOf="@+id/back"
-
-                    android:text="@string/produk" />
-
-
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-
+    
     <androidx.cardview.widget.CardView
         android:id="@+id/cardt2"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@+id/cardt1"
-        android:layout_marginTop="10dp">
+        android:layout_height="200dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
