@@ -1,5 +1,6 @@
 package com.semutunic.pesenmlijo.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,9 +8,19 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.activities.DalamPengirimanPenjual;
+import com.semutunic.pesenmlijo.activities.DalamProsesPenjual;
+import com.semutunic.pesenmlijo.activities.Dibatalkan;
+import com.semutunic.pesenmlijo.activities.Ditolak;
+import com.semutunic.pesenmlijo.activities.PesananBaru;
+import com.semutunic.pesenmlijo.activities.SampaiTujuanPenjual;
+import com.semutunic.pesenmlijo.activities.Selesai;
+import com.semutunic.pesenmlijo.activities.TambahProduk;
 
 import java.util.ArrayList;
 
@@ -26,11 +37,10 @@ public class PesananFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
 
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    LinearLayout linearLayout;
     public PesananFragment() {
 
         // Required empty public constructor
@@ -68,6 +78,105 @@ public class PesananFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pesanan, container, false);
+        View view = inflater.inflate(R.layout.fragment_pesanan, container, false);
+
+        // pesanan baru
+        linearLayout = (LinearLayout) view.findViewById(R.id.PesananBaru);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pesananbaru();
+            }
+        });
+
+        // dalam proses
+        linearLayout = (LinearLayout) view.findViewById(R.id.Diprosespenjual);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                diproses();
+            }
+        });
+
+        // dalam pengiriman
+        linearLayout = (LinearLayout) view.findViewById(R.id.Pengiriman);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pengiriman();
+            }
+        });
+
+        // Sampai tujuan
+        linearLayout = (LinearLayout) view.findViewById(R.id.SampaiTujuan);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               sampai();
+            }
+        });
+
+        // Selesai
+        linearLayout = (LinearLayout) view.findViewById(R.id.Selesai);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selesai();
+            }
+        });
+
+        // dibatalkan
+        linearLayout = (LinearLayout) view.findViewById(R.id.Dibatalkan);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                batal();
+            }
+        });
+
+        // ditolak
+        linearLayout = (LinearLayout) view.findViewById(R.id.Ditolak);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tolak();
+            }
+        });
+
+        return view;
+    }
+    public void pesananbaru() {
+        Intent intent = new Intent(getActivity(), PesananBaru.class);
+        startActivity(intent);
+    }
+
+    public void diproses() {
+        Intent intent = new Intent(getActivity(), DalamProsesPenjual.class);
+        startActivity(intent);
+    }
+
+    public void pengiriman() {
+        Intent intent = new Intent(getActivity(), DalamPengirimanPenjual.class);
+        startActivity(intent);
+    }
+
+    public void sampai() {
+        Intent intent = new Intent(getActivity(), SampaiTujuanPenjual.class);
+        startActivity(intent);
+    }
+
+    public void selesai() {
+        Intent intent = new Intent(getActivity(), Selesai.class);
+        startActivity(intent);
+    }
+
+    public void batal() {
+        Intent intent = new Intent(getActivity(), Dibatalkan.class);
+        startActivity(intent);
+    }
+
+    public void tolak() {
+        Intent intent = new Intent(getActivity(), Ditolak.class);
+        startActivity(intent);
     }
 }

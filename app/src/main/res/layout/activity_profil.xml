@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,259 +7,259 @@
     tools:context=".activities.ProfilActivity">
 
     <ScrollView
-        android:paddingBottom="30dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.mikhaellopez.circularimageview.CircularImageView
-            android:layout_centerHorizontal="true"
-            android:id="@+id/ImgProfil"
-            android:layout_marginTop="50dp"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/alin"
-            app:civ_border_color="#000"
-            app:civ_border_width="2dp"
-            app:civ_shadow_radius="10" />
-
-        <ImageButton
-            android:id="@+id/ImgBtnFoto"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_below="@id/ImgProfil"
-            android:layout_alignRight="@id/ImgProfil"
-            android:layout_marginTop="-49dp"
-            android:background="@drawable/buttonprofil"
-            android:elevation="4dp"
-            android:src="@drawable/ic_edit"
-            android:textColor="#1CAE81"/>
-
-        <Button
-            android:layout_centerHorizontal="true"
-            android:id="@+id/BtnEditProfil"
-            android:onClick="Pindah"
-            android:layout_marginTop="26dp"
-            android:layout_width="150dp"
-            android:layout_height="32dp"
-            android:layout_below="@id/ImgProfil"
-            android:background="@drawable/button2"
-            android:text="Edit Profil"
-            android:textColor="#FFF"
-            android:fontFamily="@font/roboto"
-            android:textSize="18dp"/>
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp">
 
         <RelativeLayout
-            android:id="@+id/atas"
-            android:layout_marginTop="30dp"
-            android:layout_below="@id/BtnEditProfil"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/nama"
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/ImgProfil"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/alin"
+                app:civ_border_color="#000"
+                app:civ_border_width="2dp"
+                app:civ_shadow_radius="10" />
+
+            <ImageButton
+                android:id="@+id/ImgBtnFoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/ImgProfil"
+                android:layout_alignRight="@id/ImgProfil"
+                android:layout_marginTop="-49dp"
+                android:background="@drawable/buttonprofil"
+                android:elevation="4dp"
+                android:src="@drawable/ic_edit"
+                android:textColor="#1CAE81" />
+
+            <Button
+                android:id="@+id/BtnEditProfil"
+                android:layout_width="150dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/ImgProfil"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/button2"
+                android:fontFamily="@font/roboto"
+                android:onClick="Pindah"
+                android:text="Edit Profil"
+                android:textColor="#FFF"
+                android:textSize="18dp" />
+
+            <RelativeLayout
+                android:id="@+id/atas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nama"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#3D3D3D"/>
+                android:layout_below="@id/BtnEditProfil"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp">
 
-            <TextView
-                android:id="@+id/TxtNama"
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Nama"
+                    android:textColor="#3D3D3D"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/TxtNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nama"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Nama"
+                    android:textColor="#696969"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/NoTelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TxtNama"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="No. Telp"
+                    android:textColor="#3D3D3D"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/TxtNoTelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/NoTelp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="No Telp"
+                    android:textColor="#696969"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TxtNoTelp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Email"
+                    android:textColor="#3D3D3D"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/TxtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Email"
+                    android:textColor="#696969"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/provinsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TxtEmail"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Provinsi"
+                    android:textColor="#3D3D3D"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/TxtProvinsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/provinsi"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Email"
+                    android:textColor="#696969"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/kota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TxtProvinsi"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Kota / Kabupaten"
+                    android:textColor="#3D3D3D"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/TxtKota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kota"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Kota / Kabupaten"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/kecamatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TxtKota"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Kecamatan"
+                    android:textColor="#3D3D3D"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/TxtKecamatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kecamatan"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Kota / Kabupaten"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TxtKecamatan"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Alamat Lengkap"
+                    android:textColor="#3D3D3D"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/TxtAlamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alamat"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Alamat lengkap"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/jambuka"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TxtAlamat"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Jam Buka - Tutup"
+                    android:textColor="#3D3D3D"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atas"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:layout_below="@id/nama"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nama"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#696969"/>
+                android:layout_marginEnd="20dp">
 
-            <TextView
-                android:id="@+id/NoTelp"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/TxtNama"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="No. Telp"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#3D3D3D"/>
+                <TextView
+                    android:id="@+id/TxtJamBuka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alamat"
+                    android:fontFamily="@font/roboto"
+                    android:text="Buka"
+                    android:textSize="18dp" />
 
-            <TextView
-                android:id="@+id/TxtNoTelp"
-                android:layout_marginTop="5dp"
-                android:layout_below="@id/NoTelp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="No Telp"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#696969"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alamat"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="-"
+                    android:textSize="18dp" />
 
-            <TextView
-                android:id="@+id/email"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/TxtNoTelp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Email"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#3D3D3D"/>
-
-            <TextView
-                android:id="@+id/TxtEmail"
-                android:layout_marginTop="5dp"
-                android:layout_below="@id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Email"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#696969"/>
-
-            <TextView
-                android:id="@+id/provinsi"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/TxtEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Provinsi"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#3D3D3D"/>
-
-            <TextView
-                android:id="@+id/TxtProvinsi"
-                android:layout_marginTop="5dp"
-                android:layout_below="@id/provinsi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Email"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#696969"/>
-
-            <TextView
-                android:id="@+id/kota"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/TxtProvinsi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Kota / Kabupaten"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#3D3D3D"/>
-
-            <TextView
-                android:id="@+id/TxtKota"
-                android:layout_marginTop="5dp"
-                android:layout_below="@id/kota"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Kota / Kabupaten"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"/>
-
-            <TextView
-                android:id="@+id/kecamatan"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/TxtKota"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Kecamatan"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#3D3D3D"/>
-
-            <TextView
-                android:id="@+id/TxtKecamatan"
-                android:layout_marginTop="5dp"
-                android:layout_below="@id/kecamatan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Kota / Kabupaten"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"/>
-
-            <TextView
-                android:id="@+id/alamat"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/TxtKecamatan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alamat Lengkap"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#3D3D3D"/>
-
-            <TextView
-                android:id="@+id/TxtAlamat"
-                android:layout_marginTop="5dp"
-                android:layout_below="@id/alamat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alamat lengkap"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"/>
-
-            <TextView
-                android:id="@+id/jambuka"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/TxtAlamat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Jam Buka - Tutup"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#3D3D3D"/>
+                <TextView
+                    android:id="@+id/TxtJamTutup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alamat"
+                    android:fontFamily="@font/roboto"
+                    android:text="Tutup"
+                    android:textSize="18dp" />
+            </LinearLayout>
 
         </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_below="@id/atas"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/TxtJamBuka"
-                android:layout_below="@id/alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Buka"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"/>
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_below="@id/alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"/>
-
-            <TextView
-                android:id="@+id/TxtJamTutup"
-                android:layout_below="@id/alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tutup"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"/>
-        </LinearLayout>
-
-    </RelativeLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

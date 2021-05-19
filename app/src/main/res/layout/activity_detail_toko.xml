@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailToko">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/topbar1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#1CAE81">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/ImgToko"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/alin"
+                    app:civ_border_color="#FFF"
+                    app:civ_border_width="2dp"
+                    app:civ_shadow_radius="10" />
+
+                <TextView
+                    android:id="@+id/TvNamaToko3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@id/ImgToko"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Nama Toko"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="22dp" />
+
+                <LinearLayout
+                    android:id="@+id/A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TvNamaToko3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/ImgToko">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_location_on_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Alamat"
+                        android:textColor="#FFF"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/A"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/ImgToko">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_access_time_filled_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="06:00 - 18:00"
+                        android:textColor="#FFF"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/topbar1"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/card5"
+                android:padding="10dp">
+
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/garis"
+                    android:layout_marginTop="10dp"
+                    android:background="#EFEFEF"
+                    android:queryHint="Cari Produk disini" />
+
+                <ScrollView
+                    android:layout_below="@id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/DetailTokorecview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp" />
+                </ScrollView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:elevation="4dp"
+                android:background="#FDFDFD"
+                android:padding="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/totalbarang"
+                    android:layout_width="90dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"
+                    android:text="Total Barang"/>
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/totalbarang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text=":"/>
+
+                <TextView
+                    android:id="@+id/TvTotalBarang"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/t1"
+                    android:text="3"/>
+
+                <TextView
+                    android:id="@+id/totalharga"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:layout_below="@id/totalbarang"
+                    android:text="Total Harga"/>
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/totalharga"
+                    android:layout_below="@id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text=":"/>
+
+                <TextView
+                    android:id="@+id/Rpp"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/totalbarang"
+                    android:layout_toRightOf="@id/t2"
+                    android:text="Rp."/>
+
+                <TextView
+                    android:id="@+id/TvTotalHarga"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/totalbarang"
+                    android:layout_toRightOf="@id/Rpp"
+                    android:text="30000"/>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

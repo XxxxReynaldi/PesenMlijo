@@ -17,7 +17,7 @@ import com.semutunic.pesenmlijo.fragments.PesananFragment;
 import com.semutunic.pesenmlijo.fragments.ProdukFragment;
 
 public class MainActivity extends AppCompatActivity {
-    MeowBottomNavigation bottomNavigation;
+    private MeowBottomNavigation bottomNavigation;
     private static final String TAG = "tes";
 
     @Override

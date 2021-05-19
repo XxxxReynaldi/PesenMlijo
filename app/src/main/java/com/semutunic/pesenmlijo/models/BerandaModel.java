@@ -2,7 +2,7 @@ package com.semutunic.pesenmlijo.models;
 
 public class BerandaModel {
     int image;
-    String header,desc;
+    String header, desc;
 
     public BerandaModel(int image, String header, String desc) {
         this.image = image;

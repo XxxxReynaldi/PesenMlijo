@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -18,29 +17,29 @@
             android:layout_height="129dp"
             android:layout_centerInParent="true">
 
-        <!-- TextView Image-Produk -->
-        <ImageView
-            android:id="@+id/image_produk"
-            android:layout_width="75dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"/>
+            <!-- TextView Image-Produk -->
+            <ImageView
+                android:id="@+id/image_produk"
+                android:layout_width="75dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp" />
 
-        <!-- TextView Nama-Produk -->
-        <TextView
-            android:id="@+id/namaP"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/image_produk"
-            android:text="@string/nama_produk"
-            android:textSize="18sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="#000000"/>
+            <!-- TextView Nama-Produk -->
+            <TextView
+                android:id="@+id/namaP"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/image_produk"
+                android:fontFamily="@font/roboto"
+                android:text="@string/nama_produk"
+                android:textColor="#000000"
+                android:textSize="18sp" />
 
-        <!-- TextView Harga-Produk -->
+            <!-- TextView Harga-Produk -->
             <TextView
                 android:id="@+id/hargaP"
                 android:layout_width="wrap_content"
@@ -54,49 +53,49 @@
                 android:textColor="#000000"
                 android:textSize="14sp" />
 
-        <Button
-            android:id="@+id/lihat_produk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/button"
-            android:textColor="#ffffff"
-            android:layout_marginTop="18dp"
-            android:layout_toRightOf="@id/image_produk"
-            android:layout_below="@id/hargaP"
-            android:text="@string/lihat_produk"
-            android:textSize="15sp"/>
+            <Button
+                android:id="@+id/lihat_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hargaP"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/image_produk"
+                android:background="@drawable/button"
+                android:padding="12dp"
+                android:text="@string/lihat_produk"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/bagikan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button"
-            android:textColor="#ffffff"
-            android:layout_marginTop="18dp"
-            android:layout_marginLeft="22dp"
-            android:layout_toRightOf="@id/lihat_produk"
-            android:layout_below="@id/hargaP"
-            android:text="@string/bagikan"/>
+            <Button
+                android:id="@+id/bagikan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hargaP"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/lihat_produk"
+                android:background="@drawable/button"
+                android:text="@string/bagikan"
+                android:textColor="#ffffff" />
 
             <Switch
                 android:id="@+id/switch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
                 android:text="@string/stok_habis" />
 
             <ImageButton
                 android:layout_width="32dp"
                 android:layout_height="32dp"
+                android:layout_below="@id/hargaP"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="25dp"
                 android:layout_marginRight="10dp"
                 android:background="@color/colorBtnDanger"
-                android:layout_below="@id/hargaP"
-                android:src="@drawable/ic_hapus"/>
+                android:src="@drawable/ic_hapus" />
 
 
         </RelativeLayout>

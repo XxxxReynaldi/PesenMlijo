@@ -72,17 +72,17 @@ public class BerandaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_beranda, container, false);
-        recyclerView=view.findViewById(R.id.recview);
+        recyclerView = view.findViewById(R.id.recview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        dataholder=new ArrayList<>();
+        dataholder = new ArrayList<>();
 
-        BerandaModel ob1=new BerandaModel(R.drawable.alin,"Alin","Tomat");
+        BerandaModel ob1 = new BerandaModel(R.drawable.alin, "Alin", "Tomat");
         dataholder.add(ob1);
 
-        BerandaModel ob2=new BerandaModel(R.drawable.annisa,"Annisa","Bawang Merah");
+        BerandaModel ob2 = new BerandaModel(R.drawable.annisa, "Annisa", "Bawang Merah");
         dataholder.add(ob2);
 
-        BerandaModel ob3=new BerandaModel(R.drawable.annisa,"Khansa","Bawang Merah, Cabai");
+        BerandaModel ob3 = new BerandaModel(R.drawable.annisa, "Khansa", "Bawang Merah, Cabai");
         dataholder.add(ob3);
 
         recyclerView.setAdapter(new BerandaAdapter(dataholder));

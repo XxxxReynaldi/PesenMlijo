@@ -33,17 +33,9 @@
         <item>Jawa Timur</item>
         <item>Yogyakarta</item>
         <item>Bali</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
-        <item>Nusa Tenggara Barat</item>
     </string-array>
+
+    <string name="my_text"><u>Lihat Semua</u></string>
+
 </resources>
 
