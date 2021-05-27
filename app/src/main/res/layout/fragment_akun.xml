@@ -305,8 +305,9 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
 
+
                     <RelativeLayout
-                        android:id="@+id/Keluar"
+                        android:id="@+id/RlKeluar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="7dp"

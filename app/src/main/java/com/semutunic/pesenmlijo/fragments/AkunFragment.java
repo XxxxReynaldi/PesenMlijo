@@ -9,8 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.activities.LoginActivity;
 import com.semutunic.pesenmlijo.activities.ProfilActivity;
 
 /**
@@ -66,6 +68,7 @@ public class AkunFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View rootView = inflater.inflate(R.layout.fragment_akun, container, false);
+
         Button button = (Button) rootView.findViewById(R.id.BtnProfil);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,11 +76,24 @@ public class AkunFragment extends Fragment {
                 updateDetail();
             }
         });
+
+        RelativeLayout relativeLayout = (RelativeLayout) rootView.findViewById(R.id.RlKeluar);
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                keluarakun();
+            }
+        });
         return rootView;
     }
 
     public void updateDetail() {
         Intent intent = new Intent(getActivity(), ProfilActivity.class);
+        startActivity(intent);
+    }
+
+    public void keluarakun() {
+        Intent intent = new Intent(getActivity(), LoginActivity.class);
         startActivity(intent);
     }
 
