@@ -1,5 +1,6 @@
 package com.semutunic.pesenmlijo.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,8 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.activities.ProfilActivity;
+import com.semutunic.pesenmlijo.activities.TambahProduk;
 import com.semutunic.pesenmlijo.adapter.BerandaAdapter;
 import com.semutunic.pesenmlijo.adapter.ProdukAdapter;
 import com.semutunic.pesenmlijo.models.BerandaModel;
@@ -72,21 +76,35 @@ public class ProdukFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_produk, container, false);
-        recyclerView=view.findViewById(R.id.Precview);
+        recyclerView = view.findViewById(R.id.Precview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        dataholders=new ArrayList<>();
+        dataholders = new ArrayList<>();
 
-        ProdukModel ob1=new ProdukModel(R.drawable.produk,"Tomat","60000");
+        ProdukModel ob1 = new ProdukModel(R.drawable.produk, "Tomat", "60000");
         dataholders.add(ob1);
 
-        ProdukModel ob2=new ProdukModel(R.drawable.produk,"Bawang Merah","55000");
+        ProdukModel ob2 = new ProdukModel(R.drawable.produk, "Bawang Merah", "55000");
         dataholders.add(ob2);
 
-        ProdukModel ob3=new ProdukModel(R.drawable.produk,"Cabai","800000");
+        ProdukModel ob3 = new ProdukModel(R.drawable.produk, "Cabai", "800000");
         dataholders.add(ob3);
 
         recyclerView.setAdapter(new ProdukAdapter(dataholders));
 
+        //button tambah produk
+        Button button = (Button) view.findViewById(R.id.BtnTambahProduk);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tambahProduk();
+            }
+        });
+
         return view;
+    }
+
+    public void tambahProduk() {
+        Intent intent = new Intent(getActivity(), TambahProduk.class);
+        startActivity(intent);
     }
 }

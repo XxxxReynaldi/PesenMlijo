@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailProduk">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Status Pengiriman"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tgl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Tanggal Pembelian"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/TvStatusPengiriman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/card"
+                        android:fontFamily="@font/roboto"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="Pesanan baru"
+                        android:textColor="#0D00A6"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TvStatusPengiriman"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="18 Mei 2021"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardt1"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/detailpembeli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Detail Pembeli"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:id="@+id/v1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/detailpembeli"
+                        android:layout_marginTop="10dp"
+                        android:background="#AEAEAE" />
+
+                    <TextView
+                        android:id="@+id/nama"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v1"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Nama"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/titik1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v1"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/nama"
+                        android:fontFamily="@font/roboto"
+                        android:text=":"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/titik1"
+                        android:fontFamily="@font/roboto"
+                        android:text="Bahrul Ulum"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/notelppembeli"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nama"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="No. Telp"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/titik2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titik1"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/notelppembeli"
+                        android:fontFamily="@font/roboto"
+                        android:text=":"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvNoTelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TvNama"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/titik2"
+                        android:fontFamily="@font/roboto"
+                        android:text="084944150786"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/alamt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notelppembeli"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Alamat"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/titik3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titik2"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/alamt"
+                        android:fontFamily="@font/roboto"
+                        android:text=":"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TvNoTelp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/titik3"
+                        android:fontFamily="@font/roboto"
+                        android:text="Jl. Yos Sudarso no 180 Tunggorono Jombang Jawa Timur "
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardt2"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/detailproduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Detail Produk"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/TvTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/TvDetailJumlahProduk"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Total"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/TvDetailJumlahProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/TvProduk"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="3"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/TvProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Produk"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:id="@+id/v2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/detailproduk"
+                        android:layout_marginTop="10dp"
+                        android:background="#AEAEAE" />
+
+                    <ImageView
+                        android:id="@+id/IvFotoProduk"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/v2"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/produk" />
+
+                    <TextView
+                        android:id="@+id/TvDetailNamaProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@id/IvFotoProduk"
+                        android:fontFamily="@font/roboto"
+                        android:text="Cabai merah"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvDetailJumlahProduk2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v2"
+                        android:layout_marginTop="15dp"
+                        android:layout_toLeftOf="@id/TvXRp"
+                        android:fontFamily="@font/roboto"
+                        android:text="3"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvXRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/TvDetailHargaProduk"
+                        android:fontFamily="@font/roboto"
+                        android:text="X Rp"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvDetailHargaProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="10.000"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TvXRp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/TvDetailTotalHargaProduk"
+                        android:fontFamily="@font/roboto"
+                        android:text="Rp"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvDetailTotalHargaProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TvDetailHargaProduk"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:fontFamily="@font/roboto"
+                        android:text="30.000"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardt3"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/informasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Detail Pembeli"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:id="@+id/v3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/informasi"
+                        android:layout_marginTop="10dp"
+                        android:background="#AEAEAE" />
+
+                    <TextView
+                        android:id="@+id/subtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v3"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Sub Total"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/biaya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/subtotal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Biaya Pengiriman"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/totalbayar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/biaya"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Total Bayar"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/Rp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v3"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@id/TvDetailSubTotal"
+                        android:fontFamily="@font/roboto"
+                        android:text="Rp"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvDetailSubTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v3"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="10.000"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/Rp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Rp2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@id/TvDetailSubTotal"
+                        android:fontFamily="@font/roboto"
+                        android:text="Rp"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvDetailBiayaPengiriman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TvDetailSubTotal"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="10.000"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/Rp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Rp3"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/TvDetailTotalBayar"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Rp"
+                        android:textColor="#F44336"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/TvDetailTotalBayar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/TvDetailBiayaPengiriman"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="30.000"
+                        android:textColor="#F44336"
+                        android:textSize="15dp" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardt5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardt4"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp">
+
+                    <Button
+                        android:id="@+id/BtnTolak"
+                        android:layout_width="150dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/btntolak"
+                        android:fontFamily="@font/roboto"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Tolak"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#F44336"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/BtnTerima"
+                        android:layout_width="150dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/roboto"
+                        android:paddingLeft="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Terima"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

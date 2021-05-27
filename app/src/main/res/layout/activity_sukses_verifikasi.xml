@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,8 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/sukses"
-        />
+        android:src="@drawable/sukses" />
 
     <TextView
         android:id="@+id/TVselamat"
@@ -24,9 +22,9 @@
         android:layout_below="@id/IVsukses"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:textColor="#fff"
-        android:text=" Selamat! "
         android:fontFamily="@font/roboto"
+        android:text=" Selamat! "
+        android:textColor="#fff"
         android:textSize="24sp" />
 
     <TextView
@@ -35,23 +33,23 @@
         android:layout_below="@id/TVselamat"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
-        android:textColor="#fff"
-        android:text="Toko online berhasil dibuat"
         android:fontFamily="@font/roboto"
+        android:text="Toko online berhasil dibuat"
+        android:textColor="#fff"
         android:textSize="24sp" />
 
     <Button
         android:id="@+id/lanjut"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/button4"
-        android:textColor="#1CAE81"
-        android:layout_marginBottom="30dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button4"
         android:fontFamily="@font/roboto_bold"
         android:text="Lanjut"
-        android:textSize="28dp"/>
+        android:textColor="#1CAE81"
+        android:textSize="28dp" />
 
 </RelativeLayout>
