@@ -83,14 +83,14 @@ public class BerandaPembeliFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         dataholderberanda = new ArrayList<>();
 
-        BerandaPembeliModel ob1 = new BerandaPembeliModel(R.drawable.produk, "Bahagia", "Tomat", "10000");
-        dataholderberanda.add(ob1);
+        BerandaPembeliModel data1 = new BerandaPembeliModel(R.drawable.produk, "Bahagia", "Tomat", "10000");
+        dataholderberanda.add(data1);
 
-        BerandaPembeliModel ob2 = new BerandaPembeliModel(R.drawable.produk, "Sumber Rezeki", "Bawang Merah", "10000");
-        dataholderberanda.add(ob2);
+        BerandaPembeliModel data2 = new BerandaPembeliModel(R.drawable.produk, "Sumber Rezeki", "Bawang Merah", "10000");
+        dataholderberanda.add(data2);
 
-        BerandaPembeliModel ob3 = new BerandaPembeliModel(R.drawable.produk, "Berkah", "Cabai", "10000");
-        dataholderberanda.add(ob3);
+        BerandaPembeliModel data3 = new BerandaPembeliModel(R.drawable.produk, "Berkah", "Cabai", "10000");
+        dataholderberanda.add(data3);
 
         recyclerView.setAdapter(new BerandaPembeliAdapter(dataholderberanda));
 

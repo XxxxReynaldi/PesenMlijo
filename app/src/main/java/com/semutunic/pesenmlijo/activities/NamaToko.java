@@ -57,8 +57,8 @@ public class NamaToko extends AppCompatActivity {
 
     void addData(){
         namatokoArrayList = new ArrayList<>();
-        namatokoArrayList.add(new NamaTokoModel(R.drawable.produk, "Bahagia", "Tomat", "10000"));
-        namatokoArrayList.add(new NamaTokoModel(R.drawable.produk, "Sumber Rezeki", "Bawang Merah", "10000"));
-        namatokoArrayList.add(new NamaTokoModel(R.drawable.produk, "Berkah", "Cabai", "10000"));
+        namatokoArrayList.add(new NamaTokoModel(R.drawable.produk, "Budi doremi", "Tomat", "10000"));
+        namatokoArrayList.add(new NamaTokoModel(R.drawable.produk, "Ariel Noah", "Bawang Merah", "10000"));
+        namatokoArrayList.add(new NamaTokoModel(R.drawable.produk, "Cak nan", "Cabai", "10000"));
     }
 }

@@ -1,5 +1,6 @@
 package com.semutunic.pesenmlijo.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.activities.Dibatalkan;
+import com.semutunic.pesenmlijo.activities.Ditolak;
+import com.semutunic.pesenmlijo.activities.Selesai;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,7 +30,7 @@ public class PesananPembeliFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    LinearLayout linearLayout;
     public PesananPembeliFragment() {
         // Required empty public constructor
     }
@@ -61,6 +66,50 @@ public class PesananPembeliFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pesanan_pembeli, container, false);
+        View view = inflater.inflate(R.layout.fragment_pesanan_pembeli, container, false);
+
+        // Selesai
+        linearLayout = (LinearLayout) view.findViewById(R.id.Selesai);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selesai();
+            }
+        });
+
+        // dibatalkan
+        linearLayout = (LinearLayout) view.findViewById(R.id.Dibatalkan);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                batal();
+            }
+        });
+
+        // ditolak
+        linearLayout = (LinearLayout) view.findViewById(R.id.Ditolak);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tolak();
+            }
+        });
+
+        return view;
+    }
+
+    public void selesai() {
+        Intent intent = new Intent(getActivity(), Selesai.class);
+        startActivity(intent);
+    }
+
+    public void batal() {
+        Intent intent = new Intent(getActivity(), Dibatalkan.class);
+        startActivity(intent);
+    }
+
+    public void tolak() {
+        Intent intent = new Intent(getActivity(), Ditolak.class);
+        startActivity(intent);
     }
 }
