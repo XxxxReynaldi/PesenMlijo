@@ -14,44 +14,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.DetailToko"></activity>
+        <activity android:name=".activities.DetailToko"></activity>\
+
         <activity
             android:name=".activities.NamaToko"
             android:label="Brokoli"
             android:parentActivityName=".activities.Kategori"
             android:theme="@style/AppTheme2" />
+
         <activity
             android:name=".activities.Kategori"
             android:label="Kategori"
             android:parentActivityName=".fragments.BerandaPembeliFragment"
             android:theme="@style/AppTheme2" />
+
         <activity android:name=".activities.MainActivity2"></activity>
+
         <activity android:name=".activities.RegisterPembeli" />
+
         <activity
             android:name=".activities.Ditolak"
             android:label="Ditolak"
             android:parentActivityName=".fragments.PesananFragment"
             android:theme="@style/AppTheme2" />
+
         <activity
             android:name=".activities.Dibatalkan"
             android:label="Dibatalkan"
             android:parentActivityName=".fragments.PesananFragment"
             android:theme="@style/AppTheme2" />
+
         <activity
             android:name=".activities.Selesai"
             android:label="Selesai"
             android:parentActivityName=".fragments.PesananFragment"
             android:theme="@style/AppTheme2" />
+
         <activity
             android:name=".activities.DalamPengirimanPenjual"
             android:label="Dalam Pengiriman"
             android:parentActivityName=".fragments.PesananFragment"
             android:theme="@style/AppTheme2" />
+
         <activity
             android:name=".activities.SampaiTujuanPenjual"
             android:label="Sampai Tujuan"
             android:parentActivityName=".fragments.PesananFragment"
             android:theme="@style/AppTheme2" />
+
         <activity
             android:name=".activities.DalamProsesPenjual"
             android:label="Diproses"
@@ -68,7 +78,16 @@
             android:label="Pesanan Baru"
             android:parentActivityName=".fragments.PesananFragment"
             android:theme="@style/AppTheme2" />
-        <activity android:name=".activities.SplashScreen" />
+
+        <activity android:name=".activities.SplashScreen"
+            android:theme="@style/AppSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".EditProfilActivity"
             android:label="Edit Profil"
@@ -81,14 +100,12 @@
             android:theme="@style/AppTheme2" />
         <activity android:name=".activities.SuksesRegisterActivity" />
         <activity android:name=".activities.RegisterPenjualActivity" />
-        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.LoginActivity">
+
+        </activity>
 
         <activity android:name=".activities.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
