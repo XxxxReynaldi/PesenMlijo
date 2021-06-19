@@ -22,7 +22,7 @@
         android:background="#1CAE81"
         app:itemIconTint="#FFF"
         app:itemTextColor="#FFF"
-        app:menu="@menu/bottom_navigation_menu"
+        app:menu="@menu/botnav_penjual"
         />
 
 </LinearLayout>

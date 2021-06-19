@@ -1,4 +1,4 @@
-package com.semutunic.pesenmlijo;
+package com.semutunic.pesenmlijo.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,19 +8,21 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
+import com.semutunic.pesenmlijo.R;
+
 import java.util.Calendar;
 
 public class EditProfilActivity extends AppCompatActivity {
-    EditText jamBuka, JamTutup;
+    EditText etJamBuka, etJamTutup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profil);
-        jamBuka = (EditText) findViewById(R.id.EtJamBuka);
-        JamTutup = (EditText) findViewById(R.id.EtJamTutup);
+        etJamBuka   = findViewById(R.id.EtJamBuka);
+        etJamTutup  = findViewById(R.id.EtJamTutup);
 
-        jamBuka.setOnClickListener(new View.OnClickListener() {
+        etJamBuka.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -33,7 +35,7 @@ public class EditProfilActivity extends AppCompatActivity {
 
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        jamBuka.setText(selectedHour + ":" + selectedMinute);
+                        etJamBuka.setText(selectedHour + ":" + selectedMinute);
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -42,7 +44,7 @@ public class EditProfilActivity extends AppCompatActivity {
             }
         });
 
-        JamTutup.setOnClickListener(new View.OnClickListener() {
+        etJamTutup.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -55,7 +57,7 @@ public class EditProfilActivity extends AppCompatActivity {
 
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        JamTutup.setText(selectedHour + " : " + selectedMinute);
+                        etJamTutup.setText(selectedHour + " : " + selectedMinute);
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");

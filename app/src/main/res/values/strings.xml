@@ -12,6 +12,11 @@
     <string name="tambah_produk">Tambah Produk</string>
     <string name="filter">Filter</string>
     <string name="daftar_produk">Daftar Produk</string>
+
+    <string name="auth_failed">Authentication gagal, cek email dan password anda </string>
+    <string name="minimum_password">Password terlalu pendek, masukkan minimum 6 karakter!</string>
+    <string name="maximum_password">Password terlalu panjang, masukkan maximum 25 karakter!</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
