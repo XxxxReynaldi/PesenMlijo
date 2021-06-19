@@ -8,9 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toolbar;
 
-import com.semutunic.pesenmlijo.EditProfilActivity;
 import com.semutunic.pesenmlijo.R;
 
 public class ProfilActivity extends AppCompatActivity {
@@ -37,10 +35,10 @@ public class ProfilActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void Pindah(View view) {
+    public void EditProfile(View view) {
         Intent intent = new Intent(ProfilActivity.this, EditProfilActivity.class);
         startActivity(intent);
     }
 
 
-    }
+}

@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.semutunic.pesenmlijo.R;
 import com.semutunic.pesenmlijo.activities.LoginActivity;
 import com.semutunic.pesenmlijo.activities.ProfilActivity;
@@ -62,12 +64,27 @@ public class AkunFragment extends Fragment {
         }
     }
 
+    private RelativeLayout rlKeluar;
+    private FirebaseAuth auth;
+    private FirebaseAuth.AuthStateListener authListener;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         View rootView = inflater.inflate(R.layout.fragment_akun, container, false);
+
+        auth = FirebaseAuth.getInstance();
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        rlKeluar = rootView.findViewById(R.id.RlKeluar);
+        rlKeluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                keluarAkun();
+            }
+        });
 
         Button button = (Button) rootView.findViewById(R.id.BtnProfil);
         button.setOnClickListener(new View.OnClickListener() {
@@ -77,13 +94,6 @@ public class AkunFragment extends Fragment {
             }
         });
 
-        RelativeLayout relativeLayout = (RelativeLayout) rootView.findViewById(R.id.RlKeluar);
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                keluarakun();
-            }
-        });
         return rootView;
     }
 
@@ -92,9 +102,8 @@ public class AkunFragment extends Fragment {
         startActivity(intent);
     }
 
-    public void keluarakun() {
-        Intent intent = new Intent(getActivity(), LoginActivity.class);
-        startActivity(intent);
+    public void keluarAkun() {
+        auth.signOut();
     }
 
 }

@@ -24,19 +24,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.semutunic.pesenmlijo.R;
-import com.semutunic.pesenmlijo.fragments.BerandaFragment;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterPenjualActivity extends AppCompatActivity {
+public class RegisterPembeliActivity extends AppCompatActivity {
 
     public static final String TAG = "TAG";
 
     private TextInputLayout lyNama, lyAlamat, lyNotelp, lyEmail, lyPassword;
     private EditText etNama, etAlamat, etNotelp, etEmail, etPassword;
     private TextView tvMasuk;
-    private Button btnDaftarPenjual;
+    private Button btnDaftarPembeli;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     private FirebaseFirestore fStore;
@@ -46,16 +45,16 @@ public class RegisterPenjualActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_penjual);
+        setContentView(R.layout.activity_register_pembeli);
 
         component();
 
         if(auth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            startActivity(new Intent(getApplicationContext(),MainActivity2.class));
             finish();
         }
 
-        btnDaftarPenjual.setOnClickListener(new View.OnClickListener(){
+        btnDaftarPembeli.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 
@@ -100,21 +99,21 @@ public class RegisterPenjualActivity extends AppCompatActivity {
                 }
 
                 progressBar.setVisibility(View.VISIBLE);
-                btnDaftarPenjual.setVisibility(View.GONE);
+                btnDaftarPembeli.setVisibility(View.GONE);
 
                 auth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(RegisterPenjualActivity.this, new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(RegisterPembeliActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(RegisterPenjualActivity.this, "createUserWithEmail:onComplete: " + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterPembeliActivity.this, "createUserWithEmail:onComplete: " + task.isSuccessful(), Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
-                                btnDaftarPenjual.setVisibility(View.VISIBLE);
+                                btnDaftarPembeli.setVisibility(View.VISIBLE);
 
                                 if (!task.isSuccessful()){
-                                    Toast.makeText(RegisterPenjualActivity.this, "Autentikasi Gagal : "+task.getException().getMessage()
+                                    Toast.makeText(RegisterPembeliActivity.this, "Autentikasi Gagal : "+task.getException().getMessage()
                                             , Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Toast.makeText(RegisterPenjualActivity.this, "User berhasil terdaftar", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(RegisterPembeliActivity.this, "User berhasil terdaftar", Toast.LENGTH_LONG).show();
 
                                     userID = auth.getCurrentUser().getUid();
                                     DocumentReference documentReference = fStore.collection("users").document(userID);
@@ -124,7 +123,7 @@ public class RegisterPenjualActivity extends AppCompatActivity {
                                     user.put("NoTelp", notelp);
                                     user.put("Email", email);
                                     user.put("Password", password);
-                                    user.put("RoleID", 1);
+                                    user.put("RoleID", 2);
 
                                     documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
@@ -138,12 +137,11 @@ public class RegisterPenjualActivity extends AppCompatActivity {
                                         }
                                     });
 
-                                    startActivity(new Intent(RegisterPenjualActivity.this, MainActivity.class));
+                                    startActivity(new Intent(RegisterPembeliActivity.this, MainActivity2.class));
                                     finish();
                                 }
                             }
                         });
-
             }
         });
 
@@ -170,7 +168,7 @@ public class RegisterPenjualActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.loading);
 
-        btnDaftarPenjual    = findViewById(R.id.BtnDaftarPenjual);
+        btnDaftarPembeli    = findViewById(R.id.BtnDaftarPembeli);
         tvMasuk             = findViewById(R.id.TvMasuk);
 
         auth = FirebaseAuth.getInstance();

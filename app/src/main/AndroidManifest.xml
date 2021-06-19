@@ -13,71 +13,73 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activities.DetailToko"></activity>\
+        android:theme="@style/AppThemeNoActionBar">
+        <activity android:name=".activities.DetailToko"></activity>
 
         <activity
             android:name=".activities.NamaToko"
             android:label="Brokoli"
             android:parentActivityName=".activities.Kategori"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
 
         <activity
             android:name=".activities.Kategori"
             android:label="Kategori"
             android:parentActivityName=".fragments.BerandaPembeliFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
 
         <activity android:name=".activities.MainActivity2"></activity>
 
-        <activity android:name=".activities.RegisterPembeli" />
+        <activity
+            android:name=".activities.RegisterPembeliActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
 
         <activity
             android:name=".activities.Ditolak"
             android:label="Ditolak"
             android:parentActivityName=".fragments.PesananFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
 
         <activity
             android:name=".activities.Dibatalkan"
             android:label="Dibatalkan"
             android:parentActivityName=".fragments.PesananFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
 
         <activity
             android:name=".activities.Selesai"
             android:label="Selesai"
             android:parentActivityName=".fragments.PesananFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
 
         <activity
             android:name=".activities.DalamPengirimanPenjual"
             android:label="Dalam Pengiriman"
             android:parentActivityName=".fragments.PesananFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
 
         <activity
             android:name=".activities.SampaiTujuanPenjual"
             android:label="Sampai Tujuan"
             android:parentActivityName=".fragments.PesananFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
 
         <activity
             android:name=".activities.DalamProsesPenjual"
             android:label="Diproses"
             android:parentActivityName=".fragments.PesananFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
         <activity android:name=".activities.DetailProduk" />
         <activity
             android:name=".activities.TambahProduk"
             android:label="Tambah Produk"
             android:parentActivityName=".fragments.ProdukFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
         <activity
             android:name=".activities.PesananBaru"
             android:label="Pesanan Baru"
             android:parentActivityName=".fragments.PesananFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
 
         <activity android:name=".activities.SplashScreen"
             android:theme="@style/AppSplash">
@@ -89,18 +91,22 @@
         </activity>
 
         <activity
-            android:name=".EditProfilActivity"
+            android:name=".activities.EditProfilActivity"
             android:label="Edit Profil"
             android:parentActivityName=".activities.ProfilActivity"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
         <activity
             android:name=".activities.ProfilActivity"
             android:label="Profil"
             android:parentActivityName=".fragments.AkunFragment"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppThemeDarkActionBar" />
         <activity android:name=".activities.SuksesRegisterActivity" />
-        <activity android:name=".activities.RegisterPenjualActivity" />
-        <activity android:name=".activities.LoginActivity">
+        <activity
+            android:name=".activities.RegisterPenjualActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden">
 
         </activity>
 

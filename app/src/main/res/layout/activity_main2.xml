@@ -23,7 +23,7 @@
         android:background="#1CAE81"
         app:itemIconTint="#FFF"
         app:itemTextColor="#FFF"
-        app:menu="@menu/botnav"
+        app:menu="@menu/botnav_pembeli"
         />
 
 </LinearLayout>
