@@ -57,12 +57,12 @@
                         android:textSize="18dp" />
 
                     <Spinner
-                        android:id="@+id/listProvinsi"
+                        android:id="@+id/Lkategori"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/TVKategoriProduk"
                         android:layout_marginTop="15dp"
-                        android:entries="@array/daftar_provinsi" />
+                        android:entries="@array/list_kategori" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -167,15 +167,7 @@
 
                         </com.google.android.material.textfield.TextInputLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/alamat"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:fontFamily="@font/roboto"
-                            android:text="-"
-                            android:textSize="18dp" />
+
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -192,11 +184,11 @@
                                 android:textSize="18dp" />
 
                             <Spinner
-                                android:id="@+id/listSatuan"
+                                android:id="@+id/LSPemesanan"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:entries="@array/daftar_provinsi" />
+                                android:entries="@array/list_satuan_pemesanan" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -264,9 +256,10 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
                                 android:paddingLeft="3dp"
-                                android:text="Satuan Berat"
+
                                 android:textSize="18dp" />
 
+<!--                            satuan berat -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
