@@ -23,7 +23,6 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.auth.User;
 import com.semutunic.pesenmlijo.R;
 import com.semutunic.pesenmlijo.models.UserModel;
 
@@ -50,8 +49,12 @@ public class LoginActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            finish();
+            userID = auth.getCurrentUser().getUid();
+            Log.d(TAG, "onSuccess: user Login is "+ userID);
+            collRef = db.collection("users"); // getCollection
+            docRef  = collRef.document(userID); // getDocument
+
+            checkUserRoute();
         }
         setContentView(R.layout.activity_login);
 
@@ -111,41 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                                     collRef = db.collection("users"); // getCollection
                                     docRef  = collRef.document(userID); // getDocument
 
-                                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                            if (task.isSuccessful()) {
-                                                DocumentSnapshot document = task.getResult();
-                                                if (document.exists()) {
-                                                    // UserModel userModel = document.toObject(UserModel.class);
-                                                    Log.d(TAG, "Document Snapshot data: "+document.getData());
-
-                                                    docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                                                        @Override
-                                                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-                                                            UserModel userModel = documentSnapshot.toObject(UserModel.class);
-                                                            int role            = userModel.getRoleID();
-                                                            Log.d(TAG, "Role : "+role);
-
-                                                            if (role == 1 ){
-                                                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                                                                finish();
-                                                            } else if (role == 2){
-                                                                startActivity(new Intent(LoginActivity.this, MainActivity2.class));
-                                                                finish();
-                                                            }
-                                                        }
-                                                    });
-
-                                                } else {
-                                                    Log.d(TAG, "Document tidak ditemukan");
-                                                }
-                                            } else {
-                                                Log.d(TAG, "get failed with ", task.getException());
-                                            }
-                                        }
-                                    });
-
+                                    checkUserRoute();
 
                                 }
                             }
@@ -168,6 +137,43 @@ public class LoginActivity extends AppCompatActivity {
 
                 // pindah halaman ke register penjual
                 startActivity(new Intent(LoginActivity.this, RegisterPenjualActivity.class));
+            }
+        });
+    }
+
+    private void checkUserRoute(){
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        // UserModel userModel = document.toObject(UserModel.class);
+                        Log.d(TAG, "Document Snapshot data: "+document.getData());
+
+                        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                            @Override
+                            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                UserModel userModel = documentSnapshot.toObject(UserModel.class);
+                                int role            = userModel.getRoleID();
+                                Log.d(TAG, "Role : "+role);
+
+                                if (role == 1 ){
+                                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                    finish();
+                                } else if (role == 2){
+                                    startActivity(new Intent(LoginActivity.this, MainActivity2.class));
+                                    finish();
+                                }
+                            }
+                        });
+
+                    } else {
+                        Log.d(TAG, "Document tidak ditemukan");
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
+                }
             }
         });
     }
