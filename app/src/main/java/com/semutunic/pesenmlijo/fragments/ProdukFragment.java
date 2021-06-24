@@ -3,6 +3,7 @@ package com.semutunic.pesenmlijo.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,7 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.semutunic.pesenmlijo.R;
 import com.semutunic.pesenmlijo.activities.ProfilActivity;
 import com.semutunic.pesenmlijo.activities.TambahProduk;
@@ -21,6 +29,7 @@ import com.semutunic.pesenmlijo.models.BerandaModel;
 import com.semutunic.pesenmlijo.models.ProdukModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,8 +46,8 @@ public class ProdukFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    RecyclerView recyclerView;
-    ArrayList<ProdukModel> dataholders;
+//    RecyclerView recyclerView;
+//    ArrayList<ProdukModel> dataholders;
 
     public ProdukFragment() {
         // Required empty public constructor
@@ -71,25 +80,25 @@ public class ProdukFragment extends Fragment {
         }
     }
 
+    private RecyclerView recyclerView;
+    private FirebaseFirestore db;
+    private ProdukAdapter adapter;
+    private List<ProdukModel> list;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_produk, container, false);
         recyclerView = view.findViewById(R.id.Precview);
+
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        dataholders = new ArrayList<>();
 
-        ProdukModel ob1 = new ProdukModel(R.drawable.produk, "Tomat", "60000");
-        dataholders.add(ob1);
-
-        ProdukModel ob2 = new ProdukModel(R.drawable.produk, "Bawang Merah", "55000");
-        dataholders.add(ob2);
-
-        ProdukModel ob3 = new ProdukModel(R.drawable.produk, "Cabai", "800000");
-        dataholders.add(ob3);
-
-        recyclerView.setAdapter(new ProdukAdapter(dataholders));
+        db = FirebaseFirestore.getInstance();
+        list = new ArrayList<>();
+        adapter = new ProdukAdapter(this, list);
+        recyclerView.setAdapter(adapter);
 
         //button tambah produk
         Button button = (Button) view.findViewById(R.id.BtnTambahProduk);
@@ -100,9 +109,33 @@ public class ProdukFragment extends Fragment {
             }
         });
 
+        showData(view);
         return view;
     }
 
+    private void showData(View view){
+
+        db.collection("Produk").get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        list.clear();
+                        for (DocumentSnapshot snapshot : task.getResult()){
+
+                            ProdukModel model = new ProdukModel(snapshot.getString("id"), snapshot.getString("nama produk"), snapshot.getString("harga"));
+                            list.add(model);
+                        }
+                        adapter.notifyDataSetChanged();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getActivity(), "Oops ... something went wrong", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    // Tambah Produk
     public void tambahProduk() {
         Intent intent = new Intent(getActivity(), TambahProduk.class);
         startActivity(intent);

@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "971612694213",
-    "firebase_url": "https://jomlijo-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "jomlijo",
-    "storage_bucket": "jomlijo.appspot.com"
+    "project_number": "600599365841",
+    "project_id": "pesenmlijo-f6b5e",
+    "storage_bucket": "pesenmlijo-f6b5e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:971612694213:android:2292b7abc34a640a38f2ac",
+        "mobilesdk_app_id": "1:600599365841:android:c90cbae5fe10fd51d19df0",
         "android_client_info": {
           "package_name": "com.semutunic.pesenmlijo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "971612694213-op3c4on88jjaapbagfrq168ij5ji130v.apps.googleusercontent.com",
+          "client_id": "600599365841-fsm97u0ns86mgb4qggan92vj6qvcq0jc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDgCcChGSp2dW8n9LCidMoQU-v6n3akPDA"
+          "current_key": "AIzaSyDTdwcFTZ9csmimFQK-qQjIvAZl-AENtn0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "971612694213-op3c4on88jjaapbagfrq168ij5ji130v.apps.googleusercontent.com",
+              "client_id": "600599365841-fsm97u0ns86mgb4qggan92vj6qvcq0jc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -11,46 +11,55 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.fragments.ProdukFragment;
 import com.semutunic.pesenmlijo.models.ProdukModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProductViewHolder> {
+    private ProdukFragment activity;
+    private List<ProdukModel> mList;
 
-    ArrayList<ProdukModel> dataholders;
-
-    public ProdukAdapter(ArrayList<ProdukModel> dataholders) {
-        this.dataholders = dataholders;
+    public ProdukAdapter(ProdukFragment activity, List<ProdukModel> mList){
+        this.activity = activity;
+        this.mList = mList;
     }
-
     @NonNull
     @Override
-    public ProdukAdapter.ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_produk, parent, false);
-        return new ProdukAdapter.ProductViewHolder(view);
+        return new ProductViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProdukAdapter.ProductViewHolder holder, int position) {
-        holder.img.setImageResource(dataholders.get(position).getImage());
-        holder.headerP.setText(dataholders.get(position).getHeaderP());
-        holder.descP.setText(dataholders.get(position).getDescP());
+    public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
+//        holder.img.setImageResource(dataholders.get(position).getImage());
+//        holder.headerP.setText(dataholders.get(position).getHeaderP());
+//        holder.descP.setText(dataholders.get(position).getDescP());
+
+        holder.namaproduk.setText(mList.get(position).getNamaproduk());
+        holder.harga.setText(mList.get(position).getHarga());
     }
 
     @Override
     public int getItemCount() {
-        return dataholders.size();
+        return mList.size();
     }
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
-        ImageView img;
-        TextView headerP, descP;
+//        ImageView img;
+//        TextView headerP, descP;
 
+        TextView namaproduk, kategori, harga, minorder, desc;
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
-            img = itemView.findViewById(R.id.ImgProduk);
-            headerP = itemView.findViewById(R.id.TVNamaProduk);
-            descP = itemView.findViewById(R.id.TVHargaProduk);
+//            img = itemView.findViewById(R.id.ImgProduk);
+//            headerP = itemView.findViewById(R.id.TVNamaProduk);
+//            descP = itemView.findViewById(R.id.TVHargaProduk);
+
+            namaproduk  =   itemView.findViewById(R.id.TVNamaProduk);
+            harga       =   itemView.findViewById(R.id.TVHargaProduk);
         }
     }
 }
