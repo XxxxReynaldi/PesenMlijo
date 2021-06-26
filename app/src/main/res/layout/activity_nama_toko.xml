@@ -13,18 +13,22 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardt2"
             android:layout_width="match_parent"
-            android:layout_height="90dp">
+            android:layout_height="100dp">
 
-            <SearchView
-                android:id="@+id/searchView"
+            <EditText
+                android:id="@+id/ETCariToko"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@+id/garis"
-                android:background="#EFEFEF"
-                android:queryHint="Cari Toko" />
+                android:layout_below="@id/garis"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="Cari Toko"
+                android:padding="15dp"
+                android:textColorHint="#595959"
+                android:textStyle="normal|italic"
+                android:background="@drawable/btnserach"/>
 
         </androidx.cardview.widget.CardView>
 
