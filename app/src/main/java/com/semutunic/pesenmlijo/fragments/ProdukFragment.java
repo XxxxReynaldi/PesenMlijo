@@ -122,7 +122,7 @@ public class ProdukFragment extends Fragment {
                         list.clear();
                         for (DocumentSnapshot snapshot : task.getResult()){
 
-                            ProdukModel model = new ProdukModel(snapshot.getString("id"), snapshot.getString("nama produk"), snapshot.getString("harga"));
+                            ProdukModel model = new ProdukModel(snapshot.getString("Id"), snapshot.getString("NamaProduk"), snapshot.getString("Harga"));
                             list.add(model);
                         }
                         adapter.notifyDataSetChanged();
