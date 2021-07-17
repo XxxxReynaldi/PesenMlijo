@@ -94,7 +94,8 @@
             android:name=".activities.EditProfilActivity"
             android:label="Edit Profil"
             android:parentActivityName=".activities.ProfilActivity"
-            android:theme="@style/AppThemeDarkActionBar" />
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/MaterialThemeDarkActionBar" />
         <activity
             android:name=".activities.ProfilActivity"
             android:label="Profil"
