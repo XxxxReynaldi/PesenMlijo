@@ -26,9 +26,15 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="MaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="MaterialThemeDarkActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MaterialTheme" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-<!--        <item name="colorPrimaryDark">@color/colorSecondary</item>-->
+        <!--        <item name="colorPrimaryDark">@color/colorSecondary</item>-->
         <item name="colorAccent">@color/colorAccent</item>
         <!-- <item name="textAppearanceButton">@style/AppTextAppearance.Button</item>-->
     </style>

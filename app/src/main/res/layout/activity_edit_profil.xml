@@ -18,10 +18,20 @@
             android:layout_marginHorizontal="20dp"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama :"
+                android:textSize="14sp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/LyNama"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/colorPrimaryGreen"
+                app:boxStrokeWidth="1dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <EditText
                     android:id="@+id/EtNama"
@@ -31,37 +41,55 @@
                     android:layout_centerVertical="true"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
-                    android:hint="Nama"
                     android:inputType="textPersonName|textCapWords"
                     android:textSize="18sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/LyNoTelp"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:text="No Telp :"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/LyNotelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/colorPrimaryGreen"
+                app:boxStrokeWidth="1dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <EditText
-                    android:id="@+id/EtNoTelp"
+                    android:id="@+id/EtNotelp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
-                    android:hint="No Telp"
                     android:inputType="phone"
                     android:textSize="18sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Email :"
+                android:textSize="14sp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/LyEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/colorPrimaryGreen"
+                app:boxStrokeWidth="1dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <EditText
                     android:id="@+id/EtEmail"
@@ -71,7 +99,6 @@
                     android:layout_centerVertical="true"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
-                    android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:textSize="18sp" />
 
@@ -80,58 +107,86 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
+                android:paddingLeft="0dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Provinsi"
+                    android:text="Provinsi :"
                     android:textSize="14sp" />
 
-                <Spinner
-                    android:id="@+id/listProvinsi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:entries="@array/daftar_provinsi" />
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:boxBackgroundMode="outline"-->
+<!--                    app:boxStrokeColor="@color/colorPrimaryGreen"-->
+<!--                    app:boxStrokeWidth="1dp"-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">-->
+
+<!--                    <AutoCompleteTextView-->
+<!--                        android:id="@+id/SpProvinsi"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:completionThreshold="1"/>-->
+                    <Spinner
+                        android:id="@+id/SpProvinsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/custome_input"/>
+<!--                    android:entries="@array/daftar_provinsi" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Kota / Kabupaten"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
 
                 <Spinner
-                    android:id="@+id/listKota"
+                    android:id="@+id/SpKotaKabupaten"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/daftar_provinsi" />
+                    android:visibility="gone"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Kecamatan"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
 
                 <Spinner
-                    android:id="@+id/listKecamatan"
+                    android:id="@+id/SpKecamatan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:entries="@array/daftar_provinsi" />
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/alamat"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:text="Alamat :"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/LyAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/colorPrimaryGreen"
+                app:boxStrokeWidth="1dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <EditText
                     android:id="@+id/EtAlamat"
@@ -139,7 +194,11 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
-                    android:hint="Alamat Lengkap"
+                    android:lines="4"
+                    android:maxLines="5"
+                    android:gravity="top"
+                    android:scrollY="16dp"
+                    android:scrollbars="vertical"
                     android:textSize="18sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -150,52 +209,86 @@
                 android:layout_marginTop="10dp"
                 android:paddingBottom="100dp">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/jambuka"
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3">
+                    android:layout_weight="3"
+                    android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/EtJamBuka"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:ems="10"
-                        android:focusable="false"
-                        android:fontFamily="@font/roboto"
-                        android:hint="Jam Buka"
-                        android:textSize="18sp" />
+                        android:text="Jam Buka :"
+                        android:textSize="14sp" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/LvJamBuka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/colorPrimaryGreen"
+                        app:boxStrokeWidth="1dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                            android:id="@+id/EtJamBuka"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:fontFamily="@font/roboto"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:fontFamily="@font/roboto"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
                     android:text="-"
                     android:textSize="18sp" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/jamtutup"
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3">
+                    android:layout_weight="3"
+                    android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/EtJamTutup"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:clickable="true"
-                        android:ems="10"
-                        android:focusable="false"
-                        android:fontFamily="@font/roboto"
-                        android:hint="Jam Tutup"
-                        android:textSize="18sp" />
+                        android:text="Jam Tutup :"
+                        android:textSize="14sp" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/LyJamTutup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/colorPrimaryGreen"
+                        app:boxStrokeWidth="1dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                            android:id="@+id/EtJamTutup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:fontFamily="@font/roboto"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
 
 

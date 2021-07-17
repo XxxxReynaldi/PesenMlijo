@@ -132,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/roboto"
-                    android:text="Provinsi"
+                    android:text="@string/belum_diisi"
                     android:textColor="#696969"
                     android:textSize="18sp" />
 
@@ -146,12 +146,12 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/TvKota"
+                    android:id="@+id/TvKotaKabupaten"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/roboto"
-                    android:text="Kota / Kabupaten"
+                    android:text="@string/belum_diisi"
                     android:textSize="18sp" />
 
                 <TextView
@@ -169,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/roboto"
-                    android:text="Kecamatan"
+                    android:text="@string/belum_diisi"
                     android:textSize="18sp" />
 
                 <TextView
@@ -195,7 +195,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/roboto"
-                    android:text="Jam Buka - tutup"
+                    android:text="Jam Buka - Tutup"
                     android:textColor="#3D3D3D"
                     android:textSize="16sp" />
 
@@ -210,7 +210,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto"
-                        android:text="Buka"
+                        android:text="..."
                         android:textSize="18sp" />
 
                     <TextView
@@ -226,7 +226,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto"
-                        android:text="Tutup"
+                        android:text="..."
                         android:textSize="18sp" />
 
                 </LinearLayout>
