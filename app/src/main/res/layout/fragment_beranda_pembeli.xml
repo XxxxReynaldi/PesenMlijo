@@ -184,15 +184,19 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/cardt1">
 
-            <SearchView
-                android:id="@+id/searchView"
-                android:layout_margin="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@+id/garis"
+            <EditText
+                android:id="@+id/ETCariToko"
                 android:layout_marginTop="20dp"
-                android:background="#EFEFEF"
-                android:queryHint="Cari Toko" />
+                android:layout_margin="10dp"
+                android:layout_below="@id/garis"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="Cari Toko"
+                android:padding="15dp"
+                android:textColorHint="#595959"
+                android:textStyle="normal|italic"
+                android:background="@drawable/btnserach"/>
 
         </androidx.cardview.widget.CardView>
 
