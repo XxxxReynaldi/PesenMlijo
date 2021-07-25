@@ -1,272 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF"
     tools:context=".fragments.PesananFragment">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" >
-            <TextView
-                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                android:id="@+id/toolbar_title"
-                android:layout_gravity="center"
-                android:text="Pesanan"
-                android:textColor="@color/colorPrimaryWhite"
-                android:textSize="22dp"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </androidx.appcompat.widget.Toolbar>
+            android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_below="@id/toolbar"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <LinearLayout
-        android:id="@+id/PesananBaru"
-        android:gravity="center_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/baru"
-            />
-
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pesanan Baru"
-            android:fontFamily="@font/roboto"
-            android:textSize="18dp"
-            android:textColor="#484848"
-            />
-    </LinearLayout>
-
-        <View
-            android:id="@+id/v1"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/PesananBaru"
-            android:background="#A8A8A8"/>
-
-    <LinearLayout
-        android:layout_marginTop="5dp"
-        android:id="@+id/Diproses"
-        android:layout_below="@id/v1"
-        android:gravity="center_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/proses"
-            />
-
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Diproses"
-            android:fontFamily="@font/roboto"
-            android:textSize="18dp"
-            android:textColor="#484848"
-            />
-    </LinearLayout>
-
-        <View
-            android:id="@+id/v2"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/Diproses"
-            android:background="#A8A8A8"/>
-
-        <LinearLayout
-            android:layout_marginTop="5dp"
-            android:id="@+id/Pengiriman"
-            android:layout_below="@id/v2"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/pengiriman"
-                />
-
-            <TextView
-                android:layout_marginLeft="20dp"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dalam Pengiriman"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#484848"
-                />
-        </LinearLayout>
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
 
-        <View
-            android:id="@+id/v3"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/Pengiriman"
-            android:background="#A8A8A8"/>
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Pesanan"
+                    android:textColor="@color/colorPrimaryWhite"
+                    android:textSize="22dp" />
+            </androidx.appcompat.widget.Toolbar>
 
-        <LinearLayout
-            android:layout_marginTop="5dp"
-            android:id="@+id/SampaiTujuan"
-            android:layout_below="@id/v3"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/sampai"
-                />
-
-            <TextView
-                android:layout_marginLeft="20dp"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sampai Tujuan"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#484848"
-                />
-        </LinearLayout>
-
-        <View
-            android:id="@+id/v4"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/SampaiTujuan"
-            android:background="#A8A8A8"/>
-
-        <LinearLayout
-            android:layout_marginTop="5dp"
-            android:id="@+id/Selesai"
-            android:layout_below="@id/v4"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/selesai"
-                />
-
-            <TextView
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar"
                 android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Selesai"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#484848"
-                />
-        </LinearLayout>
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp">
 
-        <View
-            android:id="@+id/v5"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/Selesai"
-            android:background="#A8A8A8"/>
+                <LinearLayout
+                    android:id="@+id/PesananBaru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
 
-        <LinearLayout
-            android:layout_marginTop="5dp"
-            android:id="@+id/Dibatalkan"
-            android:layout_below="@id/v5"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/baru" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/batal"
-                />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Pesanan Baru"
+                        android:textColor="#484848"
+                        android:textSize="18dp" />
+                </LinearLayout>
 
-            <TextView
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dibatalkan"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#484848"
-                />
-        </LinearLayout>
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/PesananBaru"
+                    android:layout_marginTop="5dp"
+                    android:background="#A8A8A8" />
 
-        <View
-            android:id="@+id/v6"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/Dibatalkan"
-            android:background="#A8A8A8"/>
+                <LinearLayout
+                    android:id="@+id/Diprosespenjual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v1"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
 
-        <LinearLayout
-            android:layout_marginTop="5dp"
-            android:id="@+id/Ditolak"
-            android:layout_below="@id/v6"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/proses" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/batal"
-                />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Diproses"
+                        android:textColor="#484848"
+                        android:textSize="18dp" />
+                </LinearLayout>
 
-            <TextView
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ditolak"
-                android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#484848"
-                />
-        </LinearLayout>
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/Diprosespenjual"
+                    android:layout_marginTop="5dp"
+                    android:background="#A8A8A8" />
 
-        <View
-            android:id="@+id/v7"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/Ditolak"
-            android:background="#A8A8A8"/>
+                <LinearLayout
+                    android:id="@+id/Pengiriman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v2"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
 
-    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/pengiriman" />
 
-    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Dalam Pengiriman"
+                        android:textColor="#484848"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/Pengiriman"
+                    android:layout_marginTop="5dp"
+                    android:background="#A8A8A8" />
+
+                <LinearLayout
+                    android:id="@+id/SampaiTujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v3"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sampai" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Sampai Tujuan"
+                        android:textColor="#484848"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/SampaiTujuan"
+                    android:layout_marginTop="5dp"
+                    android:background="#A8A8A8" />
+
+                <LinearLayout
+                    android:id="@+id/Selesai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v4"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/selesai" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Selesai"
+                        android:textColor="#484848"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/Selesai"
+                    android:layout_marginTop="5dp"
+                    android:background="#A8A8A8" />
+
+                <LinearLayout
+                    android:id="@+id/Dibatalkan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v5"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/batal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Dibatalkan"
+                        android:textColor="#484848"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/Dibatalkan"
+                    android:layout_marginTop="5dp"
+                    android:background="#A8A8A8" />
+
+                <LinearLayout
+                    android:id="@+id/Ditolak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v6"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/batal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Ditolak"
+                        android:textColor="#484848"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/Ditolak"
+                    android:layout_marginTop="5dp"
+                    android:background="#A8A8A8" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
 </FrameLayout>

@@ -1,5 +1,6 @@
 package com.semutunic.pesenmlijo.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.semutunic.pesenmlijo.R;
+import com.semutunic.pesenmlijo.activities.LoginActivity;
+import com.semutunic.pesenmlijo.activities.ProfilActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +64,46 @@ public class AkunFragment extends Fragment {
         }
     }
 
+    private RelativeLayout rlKeluar;
+    private FirebaseAuth auth;
+    private FirebaseAuth.AuthStateListener authListener;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_akun, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_akun, container, false);
+
+        auth = FirebaseAuth.getInstance();
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        rlKeluar = rootView.findViewById(R.id.RlKeluar);
+        rlKeluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                keluarAkun();
+            }
+        });
+
+        Button button = (Button) rootView.findViewById(R.id.BtnProfil);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateDetail();
+            }
+        });
+
+        return rootView;
     }
+
+    public void updateDetail() {
+        Intent intent = new Intent(getActivity(), ProfilActivity.class);
+        startActivity(intent);
+    }
+
+    public void keluarAkun() {
+        auth.signOut();
+    }
+
 }

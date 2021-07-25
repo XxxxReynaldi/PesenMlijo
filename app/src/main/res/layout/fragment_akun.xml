@@ -1,371 +1,360 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF"
     tools:context=".fragments.AkunFragment">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay" >
-        <TextView
-            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-            android:id="@+id/toolbar_title"
-            android:layout_gravity="center"
-            android:text="Akun"
-            android:textColor="@color/colorPrimaryWhite"
-            android:textSize="22dp"
-            android:fontFamily="@font/roboto_bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </androidx.appcompat.widget.Toolbar>
-
         <RelativeLayout
-            android:id="@+id/topbar"
-            android:layout_below="@id/toolbar"
-            android:background="#1CAE81"
             android:layout_width="match_parent"
-            android:paddingTop="10dp"
-            android:paddingBottom="22dp"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:src="@drawable/bulat"
-                android:layout_marginEnd="-30dp"
-                android:layout_alignParentEnd="true"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/bulat"
-                android:layout_marginTop="80dp"
-                android:layout_marginEnd="50dp"
-                android:layout_alignParentEnd="true"/>
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Akun"
+                    android:textColor="@color/colorPrimaryWhite"
+                    android:textSize="22dp" />
+            </androidx.appcompat.widget.Toolbar>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-39dp"
-                android:src="@drawable/bulat"
-                android:layout_marginTop="75dp"
-                />
-
-            <com.mikhaellopez.circularimageview.CircularImageView
-                android:layout_centerHorizontal="true"
-                android:id="@+id/ImgProfil"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/alin"
-                app:civ_border_color="#FFF"
-                app:civ_border_width="2dp"
-                app:civ_shadow_radius="10" />
-
-            <Button
-                android:layout_centerHorizontal="true"
-                android:id="@+id/BtnProfil"
-                android:layout_marginTop="-30dp"
-                android:layout_width="100dp"
-                android:layout_height="29dp"
-                android:layout_below="@id/ImgProfil"
-                android:background="@drawable/buttonprofil"
-                android:text="Profil"
-                android:textColor="#1CAE81"
-                android:fontFamily="@font/roboto_bold"
-                android:textSize="14dp"/>
-
-            <TextView
-                android:id="@+id/NamaPenjual"
+            <RelativeLayout
+                android:id="@+id/topbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                android:layout_below="@id/BtnProfil"
-                android:fontFamily="@font/roboto_bold"
-                android:textSize="24dp"
-                android:textColor="#FFF"
-                android:text="Nama Penjual"/>
+                android:layout_below="@id/toolbar"
+                android:background="#1CAE81"
+                android:paddingTop="10dp"
+                android:paddingBottom="22dp">
 
-            <TextView
-                android:id="@+id/AlamatPenjual"
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="-30dp"
+                    android:src="@drawable/bulat" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="50dp"
+                    android:src="@drawable/bulat" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-39dp"
+                    android:layout_marginTop="75dp"
+                    android:src="@drawable/bulat" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/ImgAkun"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/alin"
+                    app:civ_border_color="#FFF"
+                    app:civ_border_width="2dp"
+                    app:civ_shadow_radius="10" />
+
+                <Button
+                    android:id="@+id/BtnProfil"
+                    android:layout_width="100dp"
+                    android:layout_height="29dp"
+                    android:layout_below="@id/ImgAkun"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-30dp"
+                    android:background="@drawable/buttonprofil"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Profil"
+                    android:textColor="#1CAE81"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/NamaPenjual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/BtnProfil"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Nama Penjual"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/AlamatPenjual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/NamaPenjual"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Alamat Penjual"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Tengah"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/topbar"
                 android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                android:layout_below="@id/NamaPenjual"
+                android:background="@drawable/myreact"
+                android:elevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/Bagikan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_share" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="50dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Bagikan Aplikasi Jo Mlijo"
+                            android:textColor="#484848"
+                            android:textSize="18dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_next" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/v1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/Bagikan"
+                        android:background="#A8A8A8" />
+
+                    <RelativeLayout
+                        android:id="@+id/Hubungi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v1"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_email" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="50dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Hubungi Kami"
+                            android:textColor="#484848"
+                            android:textSize="18dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_next" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/v2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/Hubungi"
+                        android:background="#A8A8A8" />
+
+                    <RelativeLayout
+                        android:id="@+id/BeriNilai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v2"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_star" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="50dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Beri Kami Nilai"
+                            android:textColor="#484848"
+                            android:textSize="18dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_next" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/v3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/BeriNilai"
+                        android:background="#A8A8A8" />
+
+                    <RelativeLayout
+                        android:id="@+id/PusatBantuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v3"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/group" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="50dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Pusat Bantuan"
+                            android:textColor="#484848"
+                            android:textSize="18dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_next" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bwh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tengah"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/myreact"
+                android:elevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/RlKeluar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_off" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="50dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Keluar Akun"
+                            android:textColor="#484848"
+                            android:textSize="18dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_next" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bwh"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/roboto"
-                android:textSize="18dp"
-                android:textColor="#FFF"
-                android:text="Alamat Penjual"/>
+                android:text="Versi 1.0"
+                android:textAlignment="center"
+                android:textColor="#9C9C9C"
+                android:textSize="18dp" />
 
         </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/Tengah"
-            android:layout_below="@id/topbar"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/myreact"
-            android:elevation="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RelativeLayout
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            <RelativeLayout
-                android:id="@+id/Bagikan"
-                android:paddingTop="7dp"
-                android:paddingBottom="7dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_share"
-                    android:layout_alignParentStart="true"
-                    />
-
-                <TextView
-                    android:layout_marginLeft="50dp"
-                    android:layout_centerVertical="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Bagikan Aplikasi Jo Mlijo"
-                    android:fontFamily="@font/roboto"
-                    android:textSize="18dp"
-                    android:textColor="#484848"
-                    />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_next"
-                    />
-
-            </RelativeLayout>
-
-            <View
-                android:id="@+id/v1"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/Bagikan"
-                android:background="#A8A8A8"/>
-
-            <RelativeLayout
-                android:layout_below="@id/v1"
-                android:id="@+id/Hubungi"
-                android:paddingTop="7dp"
-                android:paddingBottom="7dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_email"
-                    android:layout_alignParentStart="true"
-                    />
-
-                <TextView
-                    android:layout_marginLeft="50dp"
-                    android:layout_centerVertical="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Hubungi Kami"
-                    android:fontFamily="@font/roboto"
-                    android:textSize="18dp"
-                    android:textColor="#484848"
-                    />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_next"
-                    />
-
-            </RelativeLayout>
-
-            <View
-                android:id="@+id/v2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/Hubungi"
-                android:background="#A8A8A8"/>
-
-            <RelativeLayout
-                android:layout_below="@id/v2"
-                android:id="@+id/BeriNilai"
-                android:paddingTop="7dp"
-                android:paddingBottom="7dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_star"
-                    android:layout_alignParentStart="true"
-                    />
-
-                <TextView
-                    android:layout_marginLeft="50dp"
-                    android:layout_centerVertical="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Beri Kami Nilai"
-                    android:fontFamily="@font/roboto"
-                    android:textSize="18dp"
-                    android:textColor="#484848"
-                    />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_next"
-                    />
-
-            </RelativeLayout>
-
-            <View
-                android:id="@+id/v3"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/BeriNilai"
-                android:background="#A8A8A8"/>
-
-                <RelativeLayout
-                    android:layout_below="@id/v3"
-                    android:id="@+id/PusatBantuan"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/group"
-                        android:layout_alignParentStart="true"
-                        />
-
-                    <TextView
-                        android:layout_marginLeft="50dp"
-                        android:layout_centerVertical="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Pusat Bantuan"
-                        android:fontFamily="@font/roboto"
-                        android:textSize="18dp"
-                        android:textColor="#484848"
-                        />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentEnd="true"
-                        android:src="@drawable/ic_next"
-                        />
-
-                </RelativeLayout>
-
-        </RelativeLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/bwh"
-            android:layout_below="@id/Tengah"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/myreact"
-            android:elevation="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RelativeLayout
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <RelativeLayout
-                    android:id="@+id/Keluar"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/ic_off"
-                        android:layout_alignParentStart="true"
-                        />
-
-                    <TextView
-                        android:layout_marginLeft="50dp"
-                        android:layout_centerVertical="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Keluar"
-                        android:fontFamily="@font/roboto"
-                        android:textSize="18dp"
-                        android:textColor="#484848"
-                        />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentEnd="true"
-                        android:src="@drawable/ic_next"
-                        />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-        </RelativeLayout>
-
-        <TextView
-            android:layout_below="@id/bwh"
-            android:layout_marginTop="30dp"
-            android:textAlignment="center"
-            android:layout_centerVertical="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Keluar"
-            android:fontFamily="@font/roboto"
-            android:textSize="18dp"
-            android:textColor="#484848"
-            />
-
-        </RelativeLayout>
-
+    </ScrollView>
 
 </FrameLayout>

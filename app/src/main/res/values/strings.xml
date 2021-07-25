@@ -12,6 +12,66 @@
     <string name="tambah_produk">Tambah Produk</string>
     <string name="filter">Filter</string>
     <string name="daftar_produk">Daftar Produk</string>
+
+    <string name="auth_failed">Authentication gagal, cek email dan password anda </string>
+    <string name="minimum_password">Password terlalu pendek, masukkan minimum 6 karakter!</string>
+    <string name="maximum_password">Password terlalu panjang, masukkan maximum 25 karakter!</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="list_kategori">
+    <item>Sayur</item>
+    <item>Daging</item>
+    <item>Rempah-Rempah</item>
+    </string-array>
+
+    <string-array name="list_satuan_pemesanan">
+        <item>Pcs</item>
+        <item>Kg</item>
+        <item>Lusin</item>
+        <item>Gram</item>
+    </string-array>
+
+    <string-array name="daftar_provinsi">
+        <item>Aceh</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Riau</item>
+        <item>Kepulauan Riau</item>
+        <item>Jambi</item>
+        <item>Bengkulu</item>
+        <item>Sumatera Selatan</item>
+        <item>Kepulauan Bangka Belitung</item>
+        <item>Lampung</item>
+        <item>DKI Jakarta</item>
+        <item>Banten</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>DI Yogyakarta</item>
+        <item>Jawa Timur</item>
+        <item>Bali</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Timur</item>
+        <item>Kalimantan Utara</item>
+        <item>Sulawesi Utara</item>
+        <item>Gorontalo</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Barat</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Maluku Utara</item>
+        <item>Maluku</item>
+        <item>Papua Barat</item>
+        <item>Papua</item>
+    </string-array>
+
+    <string name="my_text"><u>Lihat Semua</u></string>
+    <string name="belum_diisi">Belum diisi</string>
+
 </resources>
+

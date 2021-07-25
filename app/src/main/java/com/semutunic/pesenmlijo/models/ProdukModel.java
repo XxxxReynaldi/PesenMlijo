@@ -3,50 +3,40 @@ package com.semutunic.pesenmlijo.models;
 public class ProdukModel {
 
 
-        private int id;
-        private int image_produk;
-        private String namaproduk;
-        private double hargaproduk;
-//        private String shortdesc;
-//        private double rating;
+        String id, namaproduk, kategori, harga, minorder, desc;
+        public ProdukModel(){}
 
-
-
-        public ProdukModel(int id, String namaproduk, double hargaproduk, int image_produk) {
-            this.id = id;
-            this.image_produk = image_produk;
-            this.namaproduk = namaproduk;
-            this.hargaproduk = hargaproduk;
-
-//            this.shortdesc = shortdesc;
-//            this.rating = rating;
-
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public int getImage() {
-            return image_produk;
-        }
-
-        public String getNamaProduk() {
-            return namaproduk;
-        }
-
-        public double getHargaProduk() {
-            return hargaproduk;
-        }
-
-
-//        public String getShortdesc() {
-//            return shortdesc;
-//        }
-
-//        public double getRating() {
-//            return rating;
-//        }
-
-
+    public String getId() {
+        return id;
     }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNamaproduk() {
+        return namaproduk;
+    }
+
+    public void setNamaproduk(String namaproduk) {
+        this.namaproduk = namaproduk;
+    }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
+    }
+
+    public  ProdukModel(String id, String namaproduk, String harga){
+                this.id         =   id;
+                this.namaproduk =   namaproduk;
+//                this.kategori   =   kategori;
+                this.harga      =   harga;
+//                this.minorder   =   minorder;
+//                this.desc       =   desc;
+        }
+
+}
